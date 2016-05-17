@@ -1,0 +1,3402 @@
+<html xmlns:graph="graph" xmlns:results="results">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <style type="text/css">
+    BODY,P,OL,TD,pre{font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;}
+    A:link {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: none;}
+    A:active {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: none;}
+    A:visited {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #999999;text-decoration: none;}
+    A:hover {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: underline;}
+    A.gray_link:link {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:active {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:visited {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:hover {font-family: Arial;font-size: 12px;color: #666666;text-decoration: underline;}
+    A.red_link:link {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:active {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:visited {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:hover {font-family: Arial;font-size: 12px;color: #990000;text-decoration: underline;}
+    A.green_link:link {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:active {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:visited {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:hover {font-family: Arial;font-size: 12px;color: #008040;text-decoration: underline;}
+    A.black_link:link {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:active {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:visited {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:hover {font-family: Arial;font-size: 12px;color: #000000;text-decoration: underline;}
+    
+    A.blue_link:link {font-family: Arial;font-size: 12px;color: #427fb6;text-decoration: none;}
+    A.blue_link:active {font-family: Arial;font-size: 12px;color: #427fb6;text-decoration: none;}
+    A.blue_link:visited {font-family: Arial;font-size: 12px;color: #427fb6;text-decoration: none;}
+    A.blue_link:hover {font-family: Arial;font-size: 12px;color: #427fb6;text-decoration: underline;}
+    
+    A.gray_red_link:link {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:active {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:visited {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:hover {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    DIV.suite_details{margin-left: 40px; padding: 10px; border: 2px solid #99aaaa;}
+    DIV.test_comment{color:#666666;}
+    DIV.header{font-size: 32px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #427fb6 }
+    DIV.small_header{font-size: 18px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #427fb6 }
+    FONT.title{font-size: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000 }
+    FONT.gray {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #999999;}    
+    FONT.gray2, FONT.gray_red {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #666666;}
+    FONT.white {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #FFFFFF;}
+    FONT.time {font-size: 11px;font-family: Arial, Helvetica, sans-serif;color: #000000;}
+    FONT.black {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;}
+    FONT.red {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #990000;}
+    FONT.red2 {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #990000; text-decoration: underline;}
+    FONT.blue {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #427fb6;}
+    FONT.green {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #008040;}
+    FONT.orange {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #F69500;}
+    FONT.goldenrod {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #DAA520;}    
+    FONT.small {font-size: 3px;font-family: Arial, Helvetica, sans-serif;color: #cccccc;}
+    IMG.screenshot{float:left; margin-right: 20px; border:1px solid black;}
+    SELECT.cs_authors {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}  
+    SELECT.ju_authors {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}  
+    SPAN.toggle_button{width: 16px; padding-right: 2px; display: inline-block;} 
+    TD.associations{vertical-align: top;}
+    TD.collapse_controls{text-align:right;}
+    TD.cs_authors{font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;border: 1px; bordercolor: #d9c8ac;}
+    TD.error{background-color:#ffeeee}
+    TD.errorsingleborder{background-color:#ffeeee;border:1px solid #CBCBCB}
+    TD.singleborder{ border:1px solid #CBCBCB}
+    TABLE.header{background-color:#FFFFFF}
+    TABLE.singleborder{ border:1px solid #CBCBCB}
+    TABLE.doubleborder{ border:2px solid #CBCBCB}     
+    TABLE.singleborder_blue{ border:2px solid #427fb6}
+    TD.fixed_width{width: 150px;}
+    TD.no_error{}
+    TD.suite_details{padding:2px; }
+    UL.metrics {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:12px;}
+    UL.root {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:0px; margin-left:3px;}
+    UL {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:0px; margin-left:12px;}
+    LI {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left: 0px;}
+    #foldheader{cursor:pointer;cursor:hand ;}
+    #cs_foldheader{cursor:pointer;cursor:hand ;}
+    #cr_foldheader{cursor:pointer;cursor:hand ;}
+    #metrics_foldheader{cursor:pointer;cursor:hand ;}
+    #exec_foldheader{cursor:pointer;cursor:hand ;}
+    #paramsHeader {word-break:break-all;overflow: auto; padding: 3px;}
+    </style><title>DTP Engine for Java&nbsp;Report&nbsp;[2016-05-03T10:01:03-07:00]
+
+</title><script language="JavaScript">
+    var nwin;    
+    function openWin (loc_to_open) {    
+       if (!nwin || nwin.closed) {
+          nwin = window.open(loc_to_open,'');
+       } else {
+          nwin.location = loc_to_open;
+       }
+       nwin.focus();
+    }
+    function openDevReport (dev_rep_name) {
+       openWin('&id=' + dev_rep_name);
+    }
+    </script><script language="JavaScript">
+    function sortBySeverity(urgent){
+    if(urgent != null)  {
+        sev=document.getElementById("cs_sevtrue");
+        sev_link=document.getElementById("cs_link_sevtrue");
+        sev_title=document.getElementById("cs_title_sevtrue");
+    } else {
+        sev=document.getElementById("cs_sev");
+        sev_link=document.getElementById("cs_link_sev");
+        sev_title=document.getElementById("cs_title_sev");
+    }   
+    if(sev != null) sev.style.display='block';
+    if(sev_title != null) sev_title.style.display='block';
+    if(sev_link != null) {
+    sev_link.style.color="#666666";  
+    sev_link.style.textDecoration="none";
+    }
+    if(urgent != null)  {
+        cat=document.getElementById("cs_cattrue");
+        cat_link=document.getElementById("cs_link_cattrue");
+        cat_title=document.getElementById("cs_title_cattrue");
+    } else {
+        cat=document.getElementById("cs_cat");
+        cat_link=document.getElementById("cs_link_cat");
+        cat_title=document.getElementById("cs_title_cat");
+    }   
+    if(cat != null) cat.style.display='none';
+    if(cat_title != null) cat_title.style.display='none';
+    if(cat_link != null) {
+    cat_link.style.color="#990000";
+    cat_link.style.textDecoration="underline";
+    }
+    }
+    
+    function sortByCategory(urgent){
+    if(urgent != null)  {
+        sev=document.getElementById("cs_sevtrue");
+        sev_link=document.getElementById("cs_link_sevtrue");
+        sev_title=document.getElementById("cs_title_sevtrue");
+    } else {
+        sev=document.getElementById("cs_sev");
+        sev_link=document.getElementById("cs_link_sev");
+        sev_title=document.getElementById("cs_title_sev");
+    }
+    if(sev != null) sev.style.display='none';
+    if(sev_title != null) sev_title.style.display='none';
+    if(sev_link != null) { 
+    sev_link.style.color="#990000";   
+    sev_link.style.textDecoration="underline";
+    }       
+    if(urgent != null)  {
+        cat=document.getElementById("cs_cattrue");
+        cat_link=document.getElementById("cs_link_cattrue");
+        cat_title=document.getElementById("cs_title_cattrue");
+    } else {
+        cat=document.getElementById("cs_cat");
+        cat_link=document.getElementById("cs_link_cat");
+        cat_title=document.getElementById("cs_title_cat");
+    }
+    if(cat != null) cat.style.display='block';
+    if(cat_title != null) cat_title.style.display='block';
+    if(cat_link != null) { 
+    cat_link.style.color="#666666"; 
+    cat_link.style.textDecoration="none";
+    }
+    }
+    </script><script language="JavaScript">
+    var ns6=document.getElementById && !document.all
+    var ie4=document.all && navigator.userAgent.indexOf("Opera")==-1
+
+    function checkcontained(e)
+    {
+       cur=ns6 ? e.target : event.srcElement;
+       
+       checkFor("foldinglist", "foldheader", cur);
+       checkFor("cs_foldinglist", "cs_foldheader", cur);
+       checkFor("cr_foldinglist", "cr_foldheader", cur);
+       checkFor("metrics_foldinglist", "metrics_foldheader", cur);
+       checkFor("exec_foldinglist", "exec_foldheader", cur);
+    }
+    
+    function checkFor(foldinglist, foldheader, cur)
+    {
+        var iscontained=0;
+        i = 0;
+        if (cur.id==foldheader) {
+           iscontained=1;
+        } 
+        while (ns6 && cur.parentNode || (ie4 && cur.parentElement)) {
+             if (cur.id==foldheader||cur.id==foldinglist){
+                iscontained=(cur.id==foldheader)? 1 : 0;
+                break;
+             }
+             cur=ns6? cur.parentNode : cur.parentElement;
+        }
+
+        if (iscontained) {
+           var foldercontent=ns6? cur.nextSibling.nextSibling : cur.all.tags("UL")[0];
+           if (foldercontent.style.display=="none"){
+               foldercontent.style.display="";
+           } else {
+               foldercontent.style.display="none";
+           }
+        }    
+    }
+    function expandCSDetails() {
+       expandCollapseAll("cs_foldinglist", true);
+    }
+
+    function collapseCSDetails() {
+       expandCollapseAll("cs_foldinglist", false);
+    }
+    
+    function expandCRDetails() {
+    expandCollapseAll("cr_foldinglist", true);
+    }
+    
+    function collapseCRDetails() {
+    expandCollapseAll("cr_foldinglist", false);
+    }
+    
+    function expandMetricsDetails() {
+    expandCollapseAll("metrics_foldinglist", true);
+    }
+    
+    function collapseMetricsDetails() {
+    expandCollapseAll("metrics_foldinglist", false);
+    }
+    
+    function expandExecDetails() {
+       expandCollapseAll("exec_foldinglist", true);
+    }
+
+    function collapseExecDetails() {
+       expandCollapseAll("exec_foldinglist", false);
+    }
+    
+    function expandCollapseAll(foldinglistID, collapse) 
+    {
+        if (document.getElementById && document.createElement) {
+            m = document.getElementById(foldinglistID).getElementsByTagName('ul');
+            var i;
+            for (i = 0; i < m.length; i++) {
+              if (collapse) {
+                 m[i].style.display='block';
+              } else {
+                 m[i].style.display='none';
+              }
+            }
+        }
+    }
+
+    if (ie4||ns6) {
+       document.onclick=checkcontained;
+    }
+    </script></head>
+<body bgcolor="#E7F0F5">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td bgcolor="#3965A6" background="rep_header_expander.jpg" height="80px" width="30%" align="left"><img src="rep_header_logo.png" alt="rep_header_logo.png"></td>
+<td bgcolor="#3965A6" background="rep_header_expander.jpg" height="80px" width="40%" align="center"><img src="rep_header_1.png" alt="rep_header_1.png"></td>
+<td bgcolor="#3965A6" background="rep_header_expander.jpg" height="80px" width="30%" align="center"></td>
+</tr>
+</table>
+<table width="100%" style="padding-left:25px;padding-right:25px;padding-bottom:25px;padding-top:0px" cellspacing="0">
+<tr>
+<td align="center">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td rowspan="2" style="padding-left:20px" align="left" valign="bottom" width="20%"></td>
+<td rowspan="2" width="60%" style="padding:10px" align="center"><font class="title">Build&nbsp;<b>2016-05-03</b>&nbsp;tested using&nbsp;<b>builtin://Recommended Rules</b></font></td>
+<td width="20%" style="padding-right:20px;padding-bottom:10px" align="right" valign="top">2016-05-03T10:01:03-07:00</td>
+</tr>
+<tr>
+<td width="20%" style="padding-right:20px;padding-top:10px" align="right" valign="bottom">performed&nbsp;on&nbsp;<b>mar-VirtualBox</b>&nbsp;by&nbsp;<b>mar</b></td>
+</tr>
+</table>
+<table width="100%" class="singleborder_blue" style="padding-left:25px;padding-right:25px;padding-bottom:25px;padding-top:5px" cellspacing="0" bgcolor="#FFFFFF" bordercolor="#A0CAEC">
+<tr>
+<td><br><a name="cs"></a><table class="header" width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td width="15%"></td>
+<td align="center">
+<div class="header">STATIC ANALYSIS</div>
+</td>
+<td width="15%" align="right" valign="bottom"></td>
+</tr>
+</table><br><table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td width="80%">
+<table width="100%" class="singleborder" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td class="singleborder" width="40%" align="center" bgcolor="#F3F3F3" rowspan="2"><b>Project Name</b><br>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3" colspan="3">&nbsp;<b>Tasks</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3" colspan="2">&nbsp;<b>Files</b></td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3" colspan="2">&nbsp;<b>Lines</b></td>
+</tr>
+<tr>
+<td class="singleborder" align="center" bgcolor="#F3F3F3">suppressed</td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3">total</td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3">per 10,000 lines</td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3">checked</td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3">total</td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3">checked</td>
+<td class="singleborder" align="center" bgcolor="#F3F3F3">total</td>
+</tr>
+<tr>
+<td class="singleborder" align="left">&nbsp;com.parasoft:demo</td>
+<td class="singleborder" align="right">&nbsp;0&nbsp;</td>
+<td class="singleborder" align="right">74&nbsp;</td>
+<td class="singleborder" align="right">203&nbsp;</td>
+<td class="singleborder" align="right">&nbsp;59&nbsp;</td>
+<td class="singleborder" align="right">59&nbsp;</td>
+<td class="singleborder" align="right">&nbsp;3632&nbsp;</td>
+<td class="singleborder" align="right">3632&nbsp;</td>
+</tr>
+<tr>
+<td class="singleborder" align="left">&nbsp;<b>Total</b> [0:00:40]
+
+</td>
+<td class="singleborder" align="right">&nbsp;<b>0</b>&nbsp;
+</td>
+<td class="singleborder" align="right">&nbsp;<b>74</b>&nbsp;
+</td>
+<td class="singleborder" align="right">&nbsp;<b>203</b>&nbsp;
+</td>
+<td class="singleborder" align="right"><b>59</b>&nbsp;
+</td>
+<td class="singleborder" align="right"><b>59</b>&nbsp;
+</td>
+<td class="singleborder" align="right"><b>3632</b>&nbsp;
+</td>
+<td class="singleborder" align="right"><b>3632</b>&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table class="header" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="30%">&nbsp;</td>
+<td align="center">
+<div class="small_header" id="cs_title_cat" style="display:block;">All Tasks&nbsp;by Category</div>
+<div class="small_header" id="cs_title_sev" style="display:none;">All Tasks&nbsp;by Severity</div>
+</td>
+<td align="right" width="30%"><font class="gray2">by:</font>&nbsp;&nbsp;&nbsp;<a xmlns:textutil="textutil" xmlns:authors="authors" id="cs_link_cat" class="gray_red_link" href="javascript:sortByCategory()">Category</a>&nbsp;&nbsp;&nbsp;<a xmlns:textutil="textutil" xmlns:authors="authors" id="cs_link_sev" class="gray_red_link" href="javascript:sortBySeverity()">Severity</a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="left">
+<div id="cs_cat" style="display:block;">
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0" bordercolor="#CBCBCB">
+<tr>
+<td>&nbsp;
+[<b>16</b>]
+&nbsp;&nbsp;<b>Resources</b>&nbsp;<font class="gray">(BD.RES)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>16</b>]
+&nbsp;&nbsp;Ensure resources are deallocated&nbsp;<font class="gray">(BD.RES.LEAKS-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>4</b>]
+&nbsp;&nbsp;<b>Collections</b>&nbsp;<font class="gray">(BD.CO)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>4</b>]
+&nbsp;&nbsp;Do not modify collection while iterating over it&nbsp;<font class="gray">(BD.CO.ITMOD-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>11</b>]
+&nbsp;&nbsp;<b>Exceptions</b>&nbsp;<font class="gray">(BD.EXCEPT)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>11</b>]
+&nbsp;&nbsp;Avoid NullPointerException&nbsp;<font class="gray">(BD.EXCEPT.NP-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>9</b>]
+&nbsp;&nbsp;<b>Possible Bugs</b>&nbsp;<font class="gray">(BD.PB)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid use before explicit initialization&nbsp;<font class="gray">(BD.PB.NOTEXPLINIT-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid use of fields before initialization in constructors and static initializers&nbsp;<font class="gray">(BD.PB.NOTINITCTOR-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid division by zero&nbsp;<font class="gray">(BD.PB.ZERO-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>6</b>]
+&nbsp;&nbsp;Avoid conditions that always evaluate to the same value&nbsp;<font class="gray">(BD.PB.CC-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>2</b>]
+&nbsp;&nbsp;<b>Java Database Connectivity</b>&nbsp;<font class="gray">(JDBC)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Ensure index is valid in JDBC method invocation&nbsp;<font class="gray">(JDBC.BRSA-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Close JDBC connections in "finally" blocks&nbsp;<font class="gray">(JDBC.CDBC-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>1</b>]
+&nbsp;&nbsp;<b>Metric</b>&nbsp;<font class="gray">(METRIC)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Nested Blocks Depth&nbsp;<font class="gray">(METRIC.NBD-3)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>8</b>]
+&nbsp;&nbsp;<b>Optimization</b>&nbsp;<font class="gray">(OPT)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>4</b>]
+&nbsp;&nbsp;Close input and output resources in "finally" blocks&nbsp;<font class="gray">(OPT.CIO-3)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>4</b>]
+&nbsp;&nbsp;Declare member classes "static" if possible&nbsp;<font class="gray">(OPT.SI-3)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>2</b>]
+&nbsp;&nbsp;<b>Confusing or Unintended Behavior</b>&nbsp;<font class="gray">(PB.CUB)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>2</b>]
+&nbsp;&nbsp;Do not use '==' or '!=' to compare objects&nbsp;<font class="gray">(PB.CUB.UEIC-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>1</b>]
+&nbsp;&nbsp;<b>Typographical Errors</b>&nbsp;<font class="gray">(PB.TYPO)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Ensure "switch" statements do not contain typos&nbsp;<font class="gray">(PB.TYPO.TLS-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>3</b>]
+&nbsp;&nbsp;<b>Logical Errors</b>&nbsp;<font class="gray">(PB.LOGIC)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>3</b>]
+&nbsp;&nbsp;Ensure that the objects used within a loop's condition are properly accessed within the loop's body&nbsp;<font class="gray">(PB.LOGIC.OAMC-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>4</b>]
+&nbsp;&nbsp;<b>Useless Code</b>&nbsp;<font class="gray">(PB.USC)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid conditional expressions that always evaluate to a constant value&nbsp;<font class="gray">(PB.USC.CC-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>2</b>]
+&nbsp;&nbsp;Avoid unreachable "else if" and "else" cases&nbsp;<font class="gray">(PB.USC.UIF-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid using "private" fields which are never given a meaningful value&nbsp;<font class="gray">(PB.USC.FCBS-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>13</b>]
+&nbsp;&nbsp;<b>Unused Code</b>&nbsp;<font class="gray">(UC)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid collection objects that are never read&nbsp;<font class="gray">(UC.AURCO-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid unused labels&nbsp;<font class="gray">(UC.AUL-3)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>11</b>]
+&nbsp;&nbsp;Avoid local variables that are never read&nbsp;<font class="gray">(UC.AURV-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+<div id="cs_sev" style="display:none;">
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0" bordercolor="#CBCBCB">
+<tr>
+<td>&nbsp;
+[<b>40</b>]
+&nbsp;&nbsp;<b>Severity&nbsp;1 - Highest</b></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>4</b>]
+&nbsp;&nbsp;Do not modify collection while iterating over it&nbsp;<font class="gray">(BD.CO.ITMOD-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>11</b>]
+&nbsp;&nbsp;Avoid NullPointerException&nbsp;<font class="gray">(BD.EXCEPT.NP-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid use before explicit initialization&nbsp;<font class="gray">(BD.PB.NOTEXPLINIT-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid use of fields before initialization in constructors and static initializers&nbsp;<font class="gray">(BD.PB.NOTINITCTOR-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid division by zero&nbsp;<font class="gray">(BD.PB.ZERO-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>16</b>]
+&nbsp;&nbsp;Ensure resources are deallocated&nbsp;<font class="gray">(BD.RES.LEAKS-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Ensure index is valid in JDBC method invocation&nbsp;<font class="gray">(JDBC.BRSA-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Close JDBC connections in "finally" blocks&nbsp;<font class="gray">(JDBC.CDBC-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid conditional expressions that always evaluate to a constant value&nbsp;<font class="gray">(PB.USC.CC-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>2</b>]
+&nbsp;&nbsp;Avoid unreachable "else if" and "else" cases&nbsp;<font class="gray">(PB.USC.UIF-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid collection objects that are never read&nbsp;<font class="gray">(UC.AURCO-1)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>13</b>]
+&nbsp;&nbsp;<b>Severity&nbsp;2 - High</b></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>6</b>]
+&nbsp;&nbsp;Avoid conditions that always evaluate to the same value&nbsp;<font class="gray">(BD.PB.CC-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>2</b>]
+&nbsp;&nbsp;Do not use '==' or '!=' to compare objects&nbsp;<font class="gray">(PB.CUB.UEIC-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>3</b>]
+&nbsp;&nbsp;Ensure that the objects used within a loop's condition are properly accessed within the loop's body&nbsp;<font class="gray">(PB.LOGIC.OAMC-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Ensure "switch" statements do not contain typos&nbsp;<font class="gray">(PB.TYPO.TLS-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid using "private" fields which are never given a meaningful value&nbsp;<font class="gray">(PB.USC.FCBS-2)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;
+[<b>21</b>]
+&nbsp;&nbsp;<b>Severity&nbsp;3 - Medium</b></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Nested Blocks Depth&nbsp;<font class="gray">(METRIC.NBD-3)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>4</b>]
+&nbsp;&nbsp;Close input and output resources in "finally" blocks&nbsp;<font class="gray">(OPT.CIO-3)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>4</b>]
+&nbsp;&nbsp;Declare member classes "static" if possible&nbsp;<font class="gray">(OPT.SI-3)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Avoid unused labels&nbsp;<font class="gray">(UC.AUL-3)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>11</b>]
+&nbsp;&nbsp;Avoid local variables that are never read&nbsp;<font class="gray">(UC.AURV-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20%"></td>
+<td width="60%" align="center">
+<div class="small_header">Tasks by Author</div>
+</td>
+<td width="20%" align="right"><a class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+<table align="center" class="singleborder" width="75%" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr bgcolor="#F3F3F3">
+<td class="singleborder" width="50%" align="center" rowspan="2"><b>Author</b>&nbsp;
+</td>
+<td class="singleborder" colspan="3" align="center"><b>Tasks</b></td>
+</tr>
+<tr bgcolor="#F3F3F3">
+<td class="singleborder" align="center">suppressed</td>
+<td class="singleborder" align="center">Total</td>
+<td class="singleborder" align="center">recommended</td>
+</tr>
+<tr>
+<td class="singleborder" align="left">&nbsp;<a class="blue_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td class="singleborder" align="right">&nbsp;0&nbsp;</td>
+<td class="singleborder" align="right">&nbsp;74&nbsp;</td>
+<td class="singleborder" align="right">&nbsp;50&nbsp;</td>
+</tr>
+</table><br><table width="100%" border="0" bordercolor="#999999" cellpadding="0" cellspacing="0">
+<tr>
+<td xmlns:textutil="textutil" xmlns:authors="authors" style="padding-left:20px;" colspan="2" align="left" nowrap><a name="cs_dev1"></a><b>mar</b>&nbsp;&nbsp;Total Tasks			
+			:
+			&nbsp;74
+</td>
+<td xmlns:textutil="textutil" xmlns:authors="authors" align="right"><a class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="3" align="left">
+<table width="100%" bgcolor="#FFFFFF" bordercolor="#CBCBCB" class="doubleborder" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/servlets/ExampleServlet.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">35:</font></td>
+<td>Variable 'pr' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">37:</font></td>
+<td>Variable 'pr' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/security/InputValidation.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">58:</font></td>
+<td>The field '_connection' is used but is never assigned a non-"null" value</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.USC.FCBS-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">63:</font></td>
+<td>Variable 'output' is not closed within a "finally" block</td>
+<td style="padding-right:10px;" align="right"><font class="gray">OPT.CIO-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">110:</font></td>
+<td>JDBC statement not closed: stmt</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    InputValidation.java (87): Statement stmt = null;
+.    InputValidation.java (88): ResultSet rs = null;
+.    InputValidation.java (94): String query = "SELECT * FROM users WHERE username='" + username
+.C   InputValidation.java (96): stmt = _connection.createStatement() // Allocated resource variable: stmt
+.    InputValidation.java (97): rs = stmt.executeQuery(query) // Allocated resource variable: stmt
+.    InputValidation.java (99): if (rs.next()) { // Allocated resource variable: stmt
+.    InputValidation.java (101): return true; // Allocated resource variable: stmt
+.P   InputValidation.java (110): } // Allocated resource variable: stmt</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">110:</font></td>
+<td>JDBC resultset not closed: rs</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    InputValidation.java (87): Statement stmt = null;
+.    InputValidation.java (88): ResultSet rs = null;
+.    InputValidation.java (94): String query = "SELECT * FROM users WHERE username='" + username
+.    InputValidation.java (96): stmt = _connection.createStatement()
+.C   InputValidation.java (97): rs = stmt.executeQuery(query) // Allocated resource variable: rs
+.    InputValidation.java (99): if (rs.next()) { // Allocated resource variable: rs
+.    InputValidation.java (101): return true; // Allocated resource variable: rs
+.P   InputValidation.java (110): } // Allocated resource variable: rs</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">133:</font></td>
+<td>JDBC statement not closed: stmt</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   InputValidation.java (129): Statement stmt = _connection.createStatement(); // Allocated resource variable: stmt
+.    InputValidation.java (130): String query = "INSERT INTO invalid_logins VALUES ('" + username // Allocated resource variable: stmt
+.    InputValidation.java (132): stmt.execute(query); // Allocated resource variable: stmt
+.P   InputValidation.java (133): } // Allocated resource variable: stmt</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/queue/Queue.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">52:</font></td>
+<td>"!=" is used when comparing Objects. 'equals()' should be used instead</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.CUB.UEIC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">64:</font></td>
+<td>Member class could be declared "static": QueueItem</td>
+<td style="padding-right:10px;" align="right"><font class="gray">OPT.SI-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/nbank/Customer.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">87:</font></td>
+<td>JDBC connection 'connection' is not closed in a "finally" block</td>
+<td style="padding-right:10px;" align="right"><font class="gray">JDBC.CDBC-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">100:</font></td>
+<td>'0' is not a valid index value for this method call</td>
+<td style="padding-right:10px;" align="right"><font class="gray">JDBC.BRSA-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">111:</font></td>
+<td>JDBC Connection not closed: connection</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    Customer.java (81): Connection connection = null;
+.    Customer.java (82): PreparedStatement statement = null;
+.    Customer.java (83): ResultSet resultSet = null;
+.    Customer.java (86): Class.forName("org.gjt.mm.mysql.Driver");
+.C   Customer.java (87): connection = DriverManager.getConnection("bank", "bank", "system") // Allocated resource variable: connection
+.    Customer.java (97): statement = connection.prepareStatement("select * from accounts where id=" + _ssn) // Allocated resource variable: connection
+.    Customer.java (98): resultSet = statement.executeQuery() // Allocated resource variable: connection
+.    Customer.java (100): _name = resultSet.getString(0) // Allocated resource variable: connection
+.    Customer.java (101): _ssn = resultSet.getString(2) // Allocated resource variable: connection
+.    Customer.java (103): resultSet.close(); // Allocated resource variable: connection
+.    Customer.java (104): statement.close(); // Allocated resource variable: connection
+.    Customer.java (110): return true; // Allocated resource variable: connection
+.P   Customer.java (111): } // Allocated resource variable: connection</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">111:</font></td>
+<td>JDBC statement not closed: statement</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    Customer.java (81): Connection connection = null;
+.    Customer.java (82): PreparedStatement statement = null;
+.    Customer.java (83): ResultSet resultSet = null;
+.    Customer.java (86): Class.forName("org.gjt.mm.mysql.Driver");
+.    Customer.java (87): connection = DriverManager.getConnection("bank", "bank", "system")
+.C   Customer.java (97): statement = connection.prepareStatement("select * from accounts where id=" + _ssn) // Allocated resource variable: statement
+!E   Customer.java (98): resultSet = statement.executeQuery() // PreparedStatement.executeQuery() throws: SQLException // Allocated resource variable: statement
+.    Customer.java (105): catch (SQLException exception) // Allocated resource variable: statement
+.    Customer.java (106): System.err.println("Error loading data from database: " + exception.getMessage()); // Allocated resource variable: statement
+.    Customer.java (107): return false; // Allocated resource variable: statement
+.P   Customer.java (111): } // Allocated resource variable: statement</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">111:</font></td>
+<td>JDBC resultset not closed: resultSet</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    Customer.java (81): Connection connection = null;
+.    Customer.java (82): PreparedStatement statement = null;
+.    Customer.java (83): ResultSet resultSet = null;
+.    Customer.java (86): Class.forName("org.gjt.mm.mysql.Driver");
+.    Customer.java (87): connection = DriverManager.getConnection("bank", "bank", "system")
+.    Customer.java (97): statement = connection.prepareStatement("select * from accounts where id=" + _ssn)
+.C   Customer.java (98): resultSet = statement.executeQuery() // Allocated resource variable: resultSet
+!E   Customer.java (100): _name = resultSet.getString(0) // ResultSet.getString() throws: SQLException // Allocated resource variable: resultSet
+.    Customer.java (105): catch (SQLException exception) // Allocated resource variable: resultSet
+.    Customer.java (106): System.err.println("Error loading data from database: " + exception.getMessage()); // Allocated resource variable: resultSet
+.    Customer.java (107): return false; // Allocated resource variable: resultSet
+.P   Customer.java (111): } // Allocated resource variable: resultSet</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/nbank/LogAccountInfo.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">32:</font></td>
+<td>Variable 'out' is not closed within a "finally" block</td>
+<td style="padding-right:10px;" align="right"><font class="gray">OPT.CIO-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">36:</font></td>
+<td>Stream not closed: &lt;Writer referenced by out&gt;</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    LogAccountInfo.java (28): int balance = account.getBalance();
+.       Account.java (59): return _balance;
+.    LogAccountInfo.java (29): String id = account.getID();
+.       Account.java (49): _customer.getSSN()
+.          Customer.java (40): return _ssn;
+.       Account.java (49): return _customer.getSSN();
+.    LogAccountInfo.java (30): File file = new File("account" + id);
+.    LogAccountInfo.java (31): BufferedWriter out;
+.C   LogAccountInfo.java (32): out = new BufferedWriter(new FileWriter(file)); // Allocated resource variable: new FileWriter(file)
+!E   LogAccountInfo.java (33): out.write(id); // Writer.write() throws: IOException // Allocated resource variable: &lt;Writer referenced by out&gt;
+.P   LogAccountInfo.java (36): } // Allocated resource variable: &lt;Writer referenced by out&gt;</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/nbank/CreditCard.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">106:</font></td>
+<td>"!=" is used when comparing 'String' Objects. 'equals()' should be used instead</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.CUB.UEIC-2</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/nbank/WithdrawalTransaction.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">16:</font></td>
+<td>Condition "amount &lt; 0 &amp;&amp; amount &gt; MAX_WITHDRAW" always evaluates to false</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   WithdrawalTransaction.java (14): WithdrawalTransaction(int amount)
+.P   WithdrawalTransaction.java (16): if (amount &lt; 0 &amp;&amp; amount &gt; MAX_WITHDRAW)</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">16:</font></td>
+<td>Conditional expression always evaluates to "false"</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.USC.CC-1</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/nbank/Account.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">40:</font></td>
+<td>Condition "initial_balance &gt;= 5000" always evaluates to true</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   Account.java (36): setAccountStatus(int initial_balance)
+.    Account.java (38): if (initial_balance &lt; BALANCE_GOLD_MIN) {
+.P   Account.java (40): initial_balance &gt;= BALANCE_GOLD_MIN</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">87:</font></td>
+<td>'List' field '_newAccountsLog' is never read</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURCO-1</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/stackmachine/CommandLineStackMachine.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">79:</font></td>
+<td>Variable 'value' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/metrics/MetricsExample.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">12:</font></td>
+<td>Value 8 is out of acceptable range: 'lower than 7'</td>
+<td style="padding-right:10px;" align="right"><font class="gray">METRIC.NBD-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/eval/Simple.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">29:</font></td>
+<td>Text label 'case10' may be a typo for 'case 10'</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.TYPO.TLS-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">29:</font></td>
+<td>Avoid unused label: case10</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AUL-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/AlwaysCloseLogging.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">11:</font></td>
+<td>Logging handler not closed: handler</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   AlwaysCloseLogging.java (8): ConsoleHandler handler = new ConsoleHandler(); // Allocated resource variable: new ConsoleHandler()
+.    AlwaysCloseLogging.java (9): LogRecord record = new LogRecord(level, message); // Allocated resource variable: handler
+.    AlwaysCloseLogging.java (10): handler.publish(record); // Allocated resource variable: handler
+.P   AlwaysCloseLogging.java (11): } // Allocated resource variable: handler</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/UseBeforeInConstructorInitialization.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">43:</font></td>
+<td>"this.minLoginLength" is used prior to explicit initialization</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.NOTINITCTOR-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">!    UseBeforeInConstructorInitialization.java (31): int minLoginLength = 7; // Point of Implicit Initialization // Not explicitly initialized value: this.minLoginLength
+!    UseBeforeInConstructorInitialization.java (35): super(name, password); // Not explicitly initialized value: this.minLoginLength
+.       UseBeforeInConstructorInitialization.java (17): this.name = name; // Not explicitly initialized value: this.minLoginLength
+.       UseBeforeInConstructorInitialization.java (18): this.password = password; // Not explicitly initialized value: this.minLoginLength
+!       UseBeforeInConstructorInitialization.java (19): checkData(); // Not explicitly initialized value: this.minLoginLength
+.P         UseBeforeInConstructorInitialization.java (43): if (super.name.length() &lt; this.minLoginLength) { // Not explicitly initialized value: this.minLoginLength
+.C   UseBeforeInConstructorInitialization.java (31): int minLoginLength = 7; // Not explicitly initialized value: this.minLoginLength</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">43:</font></td>
+<td>"this.minLoginLength" is used prior to explicit initialization</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.NOTEXPLINIT-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   UseBeforeInConstructorInitialization.java (31): int minLoginLength = 7; // Not explicitly initialized value: this.minLoginLength
+!    UseBeforeInConstructorInitialization.java (35): super(name, password); // Not explicitly initialized value: this.minLoginLength
+.       UseBeforeInConstructorInitialization.java (17): this.name = name; // Not explicitly initialized value: this.minLoginLength
+.       UseBeforeInConstructorInitialization.java (18): this.password = password; // Not explicitly initialized value: this.minLoginLength
+!       UseBeforeInConstructorInitialization.java (19): checkData(); // Not explicitly initialized value: this.minLoginLength
+.P         UseBeforeInConstructorInitialization.java (43): super.name.length() &lt; this.minLoginLength // Not explicitly initialized value: this.minLoginLength</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/AlwaysCloseGSS.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">14:</font></td>
+<td>Security context not disposed: context</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   AlwaysCloseGSS.java (10): GSSContext context = GSSManager.getInstance().createContext(tokens); // Allocated resource variable: context
+.    AlwaysCloseGSS.java (11): byte[] inputBuff = new byte[256]; // Allocated resource variable: context
+.    AlwaysCloseGSS.java (12): context.initSecContext(inputBuff, 0, 256); // Allocated resource variable: context
+.P   AlwaysCloseGSS.java (14): } // Allocated resource variable: context</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">30:</font></td>
+<td>"context" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   AlwaysCloseGSS.java (21): GSSContext context = null; // Null value carrier: context
+!E   AlwaysCloseGSS.java (23): context = GSSManager.getInstance().createContext(tokens) // GSSManager.createContext() throws: GSSException // Null value carrier: context
+.    AlwaysCloseGSS.java (27): catch (Exception ioe) // Null value carrier: context
+.    AlwaysCloseGSS.java (28): System.out.println("Exception occured: " + ioe); // Null value carrier: context
+.P   AlwaysCloseGSS.java (30): context.dispose(); // Null value carrier: context</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/AlwaysCloseXMLEncDec.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">52:</font></td>
+<td>"encoder" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   AlwaysCloseXMLEncDec.java (43): XMLEncoder encoder = null; // Null value carrier: encoder
+!E   AlwaysCloseXMLEncDec.java (45): new XMLEncoder(out) // XMLEncoder.XMLEncoder() throws: RuntimeException // Null value carrier: encoder
+.    AlwaysCloseXMLEncDec.java (49): catch (Exception e) // Null value carrier: encoder
+.    AlwaysCloseXMLEncDec.java (50): System.out.println("Exception occured: " + e); // Null value carrier: encoder
+.P   AlwaysCloseXMLEncDec.java (52): encoder.close(); // Null value carrier: encoder</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">72:</font></td>
+<td>"decoder" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    AlwaysCloseXMLEncDec.java (58): Vector vObjs = new Vector();
+.C   AlwaysCloseXMLEncDec.java (59): XMLDecoder decoder = null; // Null value carrier: decoder
+!E   AlwaysCloseXMLEncDec.java (61): new XMLDecoder(in) // XMLDecoder.XMLDecoder() throws: ArrayIndexOutOfBoundsException // Null value carrier: decoder
+.    AlwaysCloseXMLEncDec.java (67): catch (ArrayIndexOutOfBoundsException endException) { // Null value carrier: decoder
+.P   AlwaysCloseXMLEncDec.java (72): decoder.close(); // Null value carrier: decoder</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/AlwaysCloseRAFs.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">12:</font></td>
+<td>Variable 'read' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">14:</font></td>
+<td>File not closed: raf</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    AlwaysCloseRAFs.java (8): String res = null;
+.C   AlwaysCloseRAFs.java (10): RandomAccessFile raf = new RandomAccessFile(sFileName, sMode); // Allocated resource variable: new RandomAccessFile(sFileName, sMode)
+.    AlwaysCloseRAFs.java (11): byte[] bytes = new byte[512]; // Allocated resource variable: raf
+!E   AlwaysCloseRAFs.java (12): int read = raf.read(bytes, offset, bytes.length); // RandomAccessFile.read() throws: IOException // Allocated resource variable: raf
+.P   AlwaysCloseRAFs.java (14): } // Allocated resource variable: raf</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">27:</font></td>
+<td>Variable 'read' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">32:</font></td>
+<td>"raf" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    AlwaysCloseRAFs.java (22): String res = null;
+.C   AlwaysCloseRAFs.java (23): RandomAccessFile raf = null; // Null value carrier: raf
+!E   AlwaysCloseRAFs.java (25): new RandomAccessFile(sFileName, sMode) // RandomAccessFile.RandomAccessFile() throws: FileNotFoundException // Null value carrier: raf
+.    AlwaysCloseRAFs.java (29): catch (Exception e) // Null value carrier: raf
+.    AlwaysCloseRAFs.java (30): System.out.println(); // Null value carrier: raf
+.P   AlwaysCloseRAFs.java (32): raf.close(); // Null value carrier: raf</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/FilesInjection.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">29:</font></td>
+<td>"fOut" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   FilesInjection.java (23): FileOutputStream fOut = null; // Null value carrier: fOut
+.    FilesInjection.java (25): String sFileName = storyName; // Null value carrier: fOut
+!E   FilesInjection.java (26): new FileOutputStream(sFileName) // FileOutputStream.FileOutputStream() throws: FileNotFoundException // Null value carrier: fOut
+.P   FilesInjection.java (29): fOut.close(); // Null value carrier: fOut</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/AlwaysCloseSockets.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">11:</font></td>
+<td>Variable 'sock' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">13:</font></td>
+<td>Socket not closed: sock</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   AlwaysCloseSockets.java (11): Socket sock = srvSocket.accept(); // Allocated resource variable: sock
+.P   AlwaysCloseSockets.java (13): } // Allocated resource variable: sock</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">27:</font></td>
+<td>"sock" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   AlwaysCloseSockets.java (20): Socket sock = null; // Null value carrier: sock
+!E   AlwaysCloseSockets.java (22): sock = srvSocket.accept() // ServerSocket.accept() throws: IOException // Null value carrier: sock
+.    AlwaysCloseSockets.java (24): catch (IOException ioe) // Null value carrier: sock
+.    AlwaysCloseSockets.java (25): System.out.println("Exception occured: " + ioe); // Null value carrier: sock
+.P   AlwaysCloseSockets.java (27): sock.close(); // Null value carrier: sock</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/AlwaysCloseNIOChannels.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">11:</font></td>
+<td>Variable 'fInput' is not closed within a "finally" block</td>
+<td style="padding-right:10px;" align="right"><font class="gray">OPT.CIO-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">14:</font></td>
+<td>Variable 'read' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">16:</font></td>
+<td>Stream not closed: fInput, &lt;FileInputStream referenced by channel&gt;, &lt;FileInputStream referenced by fInput.getChannel()&gt;</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   AlwaysCloseNIOChannels.java (11): FileInputStream fInput = new FileInputStream(filename); // Allocated resource variable: new FileInputStream(filename)
+!    AlwaysCloseNIOChannels.java (12): FileChannel channel = fInput.getChannel(); // Allocated resource variable: fInput
+.    AlwaysCloseNIOChannels.java (13): ByteBuffer dst = ByteBuffer.allocate(512); // Allocated resource variable: fInput, &lt;FileInputStream referenced by channel&gt;, &lt;FileInputStream referenced by fInput.getChannel()&gt;
+.    AlwaysCloseNIOChannels.java (14): int read = channel.read(dst); // Allocated resource variable: fInput, &lt;FileInputStream referenced by channel&gt;, &lt;FileInputStream referenced by fInput.getChannel()&gt;
+.P   AlwaysCloseNIOChannels.java (16): } // Allocated resource variable: fInput, &lt;FileInputStream referenced by channel&gt;, &lt;FileInputStream referenced by fInput.getChannel()&gt;</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">16:</font></td>
+<td>NIO channel not closed: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    AlwaysCloseNIOChannels.java (11): FileInputStream fInput = new FileInputStream(filename);
+.C   AlwaysCloseNIOChannels.java (12): FileChannel channel = fInput.getChannel(); // Allocated resource variable: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel
+.    AlwaysCloseNIOChannels.java (13): ByteBuffer dst = ByteBuffer.allocate(512); // Allocated resource variable: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel
+.    AlwaysCloseNIOChannels.java (14): int read = channel.read(dst); // Allocated resource variable: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel
+.P   AlwaysCloseNIOChannels.java (16): } // Allocated resource variable: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">25:</font></td>
+<td>Variable 'fInput' is not closed within a "finally" block</td>
+<td style="padding-right:10px;" align="right"><font class="gray">OPT.CIO-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">28:</font></td>
+<td>Variable 'read' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">33:</font></td>
+<td>"channel" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   AlwaysCloseNIOChannels.java (23): FileChannel channel = null; // Null value carrier: channel
+!E   AlwaysCloseNIOChannels.java (25): new FileInputStream(filename) // FileInputStream.FileInputStream() throws: FileNotFoundException // Null value carrier: channel
+.    AlwaysCloseNIOChannels.java (30): catch (Exception ioe) // Null value carrier: channel
+.    AlwaysCloseNIOChannels.java (31): System.out.println("Exception occured: " + ioe); // Null value carrier: channel
+.P   AlwaysCloseNIOChannels.java (33): channel.close(); // Null value carrier: channel</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/IncorrectIteratorUsage.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">15:</font></td>
+<td>Iterator "iter" may possibly be used after iterated collection is modified</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.CO.ITMOD-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   IncorrectIteratorUsage.java (14): Iterator iter = collection.iterator(); // Tracked iterators: iter // Tracked collections: collection
+.    IncorrectIteratorUsage.java (15): while (iter.hasNext()) { // Tracked iterators: iter // Tracked collections: collection
+.    IncorrectIteratorUsage.java (16): Object obj = iter.next(); // Tracked iterators: iter // Tracked collections: collection
+.    IncorrectIteratorUsage.java (17): if (tp.isAssignableFrom(obj.getClass())) { // Tracked iterators: iter // Tracked collections: collection
+!    IncorrectIteratorUsage.java (20): collection.remove(obj); // Collection Modification Point // Tracked iterators: iter // Tracked collections: collection
+.P   IncorrectIteratorUsage.java (15): iter.hasNext() // Tracked iterators: iter // Tracked collections: collection</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/AlwaysCloseImages.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">15:</font></td>
+<td>Image resource not closed: imgReader</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    AlwaysCloseImages.java (11): Image image = null;
+.C   AlwaysCloseImages.java (13): ImageReader imgReader = spi.createReaderInstance(); // Allocated resource variable: imgReader
+.    AlwaysCloseImages.java (14): image = imgReader.read(0) // Allocated resource variable: imgReader
+.P   AlwaysCloseImages.java (15): } // Allocated resource variable: imgReader</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">31:</font></td>
+<td>"imgReader" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    AlwaysCloseImages.java (23): Image image = null;
+.C   AlwaysCloseImages.java (24): ImageReader imgReader = null; // Null value carrier: imgReader
+!E   AlwaysCloseImages.java (26): imgReader = spi.createReaderInstance() // ImageReaderSpi.createReaderInstance() throws: IOException // Null value carrier: imgReader
+.    AlwaysCloseImages.java (28): catch (Exception e) // Null value carrier: imgReader
+.    AlwaysCloseImages.java (29): System.out.println("Exception occured: " + e); // Null value carrier: imgReader
+.P   AlwaysCloseImages.java (31): imgReader.dispose(); // Null value carrier: imgReader</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/InefficientCollectionRemoval.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">15:</font></td>
+<td>Iterator "iter" may possibly be used after iterated collection is modified</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.CO.ITMOD-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   InefficientCollectionRemoval.java (14): Iterator iter = collection.iterator(); // Tracked iterators: iter // Tracked collections: collection
+.    InefficientCollectionRemoval.java (15): while (iter.hasNext()) { // Tracked iterators: iter // Tracked collections: collection
+.    InefficientCollectionRemoval.java (16): Object element = iter.next(); // Tracked iterators: iter // Tracked collections: collection
+!    InefficientCollectionRemoval.java (17): collection.remove(element); // Collection Modification Point // Tracked iterators: iter // Tracked collections: collection
+.P   InefficientCollectionRemoval.java (15): iter.hasNext() // Tracked iterators: iter // Tracked collections: collection</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">28:</font></td>
+<td>'hasNext()' is called on the variable "iter" in the loop's condition, but 'next()' is never called on this variable in the
+loop's body
+</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.LOGIC.OAMC-2</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/UnreachableCode.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">13:</font></td>
+<td>Condition "result instanceof RuntimeException" always evaluates to false</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   UnreachableCode.java (8): printCalculationResult(Object result)
+.    UnreachableCode.java (10): if (result instanceof Exception) {
+.P   UnreachableCode.java (13): if (result instanceof RuntimeException) {</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">28:</font></td>
+<td>Condition "!round" always evaluates to true</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   UnreachableCode.java (21): guessFigure(boolean round, boolean volumetric)
+.    UnreachableCode.java (23): final int figure;
+.    UnreachableCode.java (24): if (round &amp;&amp; volumetric) {
+.    UnreachableCode.java (26): if (round &amp;&amp; !volumetric) {
+.P   UnreachableCode.java (28): !round</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/InefficientMapRemoval.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">15:</font></td>
+<td>Iterator "iter" may possibly be used after iterated collection is modified</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.CO.ITMOD-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   InefficientMapRemoval.java (14): Iterator iter = map.keySet().iterator(); // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (15): while (iter.hasNext()) { // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (16): Object key = iter.next(); // Tracked iterators: iter // Tracked collections: map
+!    InefficientMapRemoval.java (17): map.remove(key); // Collection Modification Point // Tracked iterators: iter // Tracked collections: map
+.P   InefficientMapRemoval.java (15): iter.hasNext() // Tracked iterators: iter // Tracked collections: map</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">28:</font></td>
+<td>Iterator "iter" may possibly be used after iterated collection is modified</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.CO.ITMOD-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   InefficientMapRemoval.java (27): Iterator iter = map.entrySet().iterator(); // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (28): while (iter.hasNext()) { // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (29): Map.Entry entry = (Map.Entry)iter.next(); // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (30): Object key = entry.getKey(); // Tracked iterators: iter // Tracked collections: map
+!    InefficientMapRemoval.java (31): map.remove(key); // Collection Modification Point // Tracked iterators: iter // Tracked collections: map
+.P   InefficientMapRemoval.java (28): iter.hasNext() // Tracked iterators: iter // Tracked collections: map</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">42:</font></td>
+<td>'hasNext()' is called on the variable "iter" in the loop's condition, but 'next()' is never called on this variable in the
+loop's body
+</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.LOGIC.OAMC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">54:</font></td>
+<td>'hasNext()' is called on the variable "iter" in the loop's condition, but 'next()' is never called on this variable in the
+loop's body
+</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.LOGIC.OAMC-2</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/DivisionByZero.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">17:</font></td>
+<td>Condition "code == 0" always evaluates to false</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   DivisionByZero.java (12): calculateDiscountedSum(int code, float initialSum, Consumer person)
+.    DivisionByZero.java (14): float discountedSum = calculateCommonDiscountedSum(initialSum);
+.       DivisionByZero.java (38): float discountedSum = 0.0f;
+.       DivisionByZero.java (39): if (initialSum &gt; 5.0f) {
+.       DivisionByZero.java (42): if (initialSum &lt; 5.0f) {
+.       DivisionByZero.java (45): return discountedSum;
+.    DivisionByZero.java (16): if (code == PERSONAL_DISCOUNT) {
+.P   DivisionByZero.java (17): if (code == DISCOUNT) {</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">17:</font></td>
+<td>The "else" condition always evaluates to "false" because of previous branches</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.USC.UIF-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">18:</font></td>
+<td>Condition "code == 0" always evaluates to false</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   DivisionByZero.java (12): calculateDiscountedSum(int code, float initialSum, Consumer person)
+.    DivisionByZero.java (14): float discountedSum = calculateCommonDiscountedSum(initialSum);
+.       DivisionByZero.java (38): float discountedSum = 0.0f;
+.       DivisionByZero.java (39): if (initialSum &gt; 5.0f) {
+.       DivisionByZero.java (42): if (initialSum &lt; 5.0f) {
+.       DivisionByZero.java (45): return discountedSum;
+.    DivisionByZero.java (16): if (code == PERSONAL_DISCOUNT) {
+.    DivisionByZero.java (17): if (code == DISCOUNT) {
+.P   DivisionByZero.java (18): if (code == SPECIAL_OFFER) {</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">18:</font></td>
+<td>The "else" condition always evaluates to "false" because of previous branches</td>
+<td style="padding-right:10px;" align="right"><font class="gray">PB.USC.UIF-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">23:</font></td>
+<td>"discountedSum" may possibly be zero</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.PB.ZERO-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   DivisionByZero.java (12): calculateDiscountedSum(int code, float initialSum, Consumer person)
+.    DivisionByZero.java (14): float discountedSum = calculateCommonDiscountedSum(initialSum);
+.       DivisionByZero.java (38): float discountedSum = 0.0f;
+.       DivisionByZero.java (39): if (initialSum &gt; 5.0f) {
+.       DivisionByZero.java (42): if (initialSum &lt; 5.0f) {
+.       DivisionByZero.java (45): return discountedSum;
+.    DivisionByZero.java (16): if (code == PERSONAL_DISCOUNT) {
+.    DivisionByZero.java (22): if (code == PERSONAL_DISCOUNT) {
+.    DivisionByZero.java (23): person.getOverallSum()
+.       DivisionByZero.java (65): return _overallSum;
+.P   DivisionByZero.java (23): float progressionCoef = person.getOverallSum() / discountedSum;</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">53:</font></td>
+<td>Member class could be declared "static": Consumer</td>
+<td style="padding-right:10px;" align="right"><font class="gray">OPT.SI-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/UseBeforeInitialization.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">22:</font></td>
+<td>Stream not closed: new FileInputStream("...")</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    UseBeforeInitialization.java (20): ObjectInputStream source = null;
+ECP   UseBeforeInitialization.java (22): new ObjectInputStream(new FileInputStream("...")) // ObjectInputStream.ObjectInputStream() throws: IOException // Allocated resource variable: new FileInputStream("...")</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">57:</font></td>
+<td>Member class could be declared "static": ValueStorage</td>
+<td style="padding-right:10px;" align="right"><font class="gray">OPT.SI-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/InefficientMapUsage.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">17:</font></td>
+<td>Variable 'value' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">31:</font></td>
+<td>Variable 'key' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">32:</font></td>
+<td>Variable 'value' is never used</td>
+<td style="padding-right:10px;" align="right"><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/np/NullPointer.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">20:</font></td>
+<td>"sFirstLine" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   NullPointer.java (10): String sFirstLine = null; // Null value carrier: sFirstLine
+.    NullPointer.java (11): BufferedReader reader = null; // Null value carrier: sFirstLine
+!E   NullPointer.java (13): new FileReader(sFileName) // FileReader.FileReader() throws: FileNotFoundException // Null value carrier: sFirstLine
+.    NullPointer.java (15): catch (Exception e) // Null value carrier: sFirstLine
+.    NullPointer.java (16): System.out.println("Exception occured. " + e.toString()); // Null value carrier: sFirstLine
+.    NullPointer.java (18): close(reader); // Null value carrier: sFirstLine
+.P   NullPointer.java (20): sFirstLine.length() // Null value carrier: sFirstLine</pre></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">26:</font></td>
+<td>"reader" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.    NullPointer.java (10): String sFirstLine = null;
+.C   NullPointer.java (11): BufferedReader reader = null; // Null value carrier: reader
+!E   NullPointer.java (13): new FileReader(sFileName) // FileReader.FileReader() throws: FileNotFoundException // Null value carrier: reader
+.    NullPointer.java (15): catch (Exception e) // Null value carrier: reader
+.    NullPointer.java (16): System.out.println("Exception occured. " + e.toString()); // Null value carrier: reader
+!    NullPointer.java (18): close(reader); // Null value carrier: reader
+.P      NullPointer.java (26): reader.close(); // Null value carrier: reader</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/np/SimpleNeverHappenedAndNotAcknowledgedByBD.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">7:</font></td>
+<td>Member class could be declared "static": Name</td>
+<td style="padding-right:10px;" align="right"><font class="gray">OPT.SI-3</font></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/flowanalysis/np/MyDictionary.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">20:</font></td>
+<td>"strKey" may possibly be null</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   MyDictionary.java (16): String strKey = null; // Null value carrier: strKey
+.    MyDictionary.java (17): if (key instanceof String) { // Null value carrier: strKey
+.P   MyDictionary.java (20): dict.put(strKey, value); // Null value carrier: strKey</pre></td>
+</tr>
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="3"><b>/demo/src/examples/stubs/ConstructorExample.java</b></td>
+</tr>
+<tr>
+<td style="padding-left:10px"><font class="gray">14:</font></td>
+<td>File not closed: file</td>
+<td style="padding-right:10px;" align="right"><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td style="padding-right:10px;" colspan="2"><pre style="margin:0px;">.C   ConstructorExample.java (12): RandomAccessFile file = new RandomAccessFile (path, "rw"); // Allocated resource variable: new RandomAccessFile (path, "rw")
+!E   ConstructorExample.java (13): file.length () // RandomAccessFile.length() throws: IOException // Allocated resource variable: file
+.P   ConstructorExample.java (14): } // Allocated resource variable: file</pre></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="3"><br></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="40%"></td>
+<td width="20%" align="center">
+<div class="small_header">Checked Files (Details)</div>
+</td>
+<td align="right" width="40%"><a xmlns:textutil="textutil" xmlns:authors="authors" class="gray_link" href="javascript:expandCSDetails()">Expand All</a>&nbsp;&nbsp;&nbsp;<a xmlns:textutil="textutil" xmlns:authors="authors" class="gray_link" href="javascript:collapseCSDetails()">Collapse All</a>&nbsp;&nbsp;&nbsp;<a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0" bordercolor="#CBCBCB">
+<tr>
+<td align="left">
+<ul class="root" id="cs_foldinglist">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>74</b></font>]                
+&nbsp;<b>Suppressed / Total</b></li>
+<ul id="cs_foldinglist">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>74</b></font>]                
+&nbsp;<b>com.parasoft:demo</b></li>
+<ul id="cs_foldinglist">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>META-INF</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>MANIFEST.MF</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>74</b></font>]                
+&nbsp;<b>src</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>74</b></font>]                
+&nbsp;<b>examples</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>eval</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>Simple.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">29:&nbsp;</font>Text label 'case10' may be a typo for 'case 10'
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.TYPO.TLS-2</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">29:&nbsp;</font>Avoid unused label: case10
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AUL-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>48</b></font>]                
+&nbsp;<b>flowanalysis</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>AlwaysCloseGSS.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">14:&nbsp;</font>Security context not disposed: context
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   AlwaysCloseGSS.java (10): GSSContext context = GSSManager.getInstance().createContext(tokens); // Allocated resource variable: context
+.    AlwaysCloseGSS.java (11): byte[] inputBuff = new byte[256]; // Allocated resource variable: context
+.    AlwaysCloseGSS.java (12): context.initSecContext(inputBuff, 0, 256); // Allocated resource variable: context
+.P   AlwaysCloseGSS.java (14): } // Allocated resource variable: context</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">30:&nbsp;</font>"context" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   AlwaysCloseGSS.java (21): GSSContext context = null; // Null value carrier: context
+!E   AlwaysCloseGSS.java (23): context = GSSManager.getInstance().createContext(tokens) // GSSManager.createContext() throws: GSSException // Null value carrier: context
+.    AlwaysCloseGSS.java (27): catch (Exception ioe) // Null value carrier: context
+.    AlwaysCloseGSS.java (28): System.out.println("Exception occured: " + ioe); // Null value carrier: context
+.P   AlwaysCloseGSS.java (30): context.dispose(); // Null value carrier: context</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>AlwaysCloseImages.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">15:&nbsp;</font>Image resource not closed: imgReader
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    AlwaysCloseImages.java (11): Image image = null;
+.C   AlwaysCloseImages.java (13): ImageReader imgReader = spi.createReaderInstance(); // Allocated resource variable: imgReader
+.    AlwaysCloseImages.java (14): image = imgReader.read(0) // Allocated resource variable: imgReader
+.P   AlwaysCloseImages.java (15): } // Allocated resource variable: imgReader</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">31:&nbsp;</font>"imgReader" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    AlwaysCloseImages.java (23): Image image = null;
+.C   AlwaysCloseImages.java (24): ImageReader imgReader = null; // Null value carrier: imgReader
+!E   AlwaysCloseImages.java (26): imgReader = spi.createReaderInstance() // ImageReaderSpi.createReaderInstance() throws: IOException // Null value carrier: imgReader
+.    AlwaysCloseImages.java (28): catch (Exception e) // Null value carrier: imgReader
+.    AlwaysCloseImages.java (29): System.out.println("Exception occured: " + e); // Null value carrier: imgReader
+.P   AlwaysCloseImages.java (31): imgReader.dispose(); // Null value carrier: imgReader</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>AlwaysCloseLogging.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">11:&nbsp;</font>Logging handler not closed: handler
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   AlwaysCloseLogging.java (8): ConsoleHandler handler = new ConsoleHandler(); // Allocated resource variable: new ConsoleHandler()
+.    AlwaysCloseLogging.java (9): LogRecord record = new LogRecord(level, message); // Allocated resource variable: handler
+.    AlwaysCloseLogging.java (10): handler.publish(record); // Allocated resource variable: handler
+.P   AlwaysCloseLogging.java (11): } // Allocated resource variable: handler</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>7</b></font>]                
+&nbsp;<b>AlwaysCloseNIOChannels.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">11:&nbsp;</font>Variable 'fInput' is not closed within a "finally" block
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">OPT.CIO-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">14:&nbsp;</font>Variable 'read' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">16:&nbsp;</font>Stream not closed: fInput, &lt;FileInputStream referenced by channel&gt;, &lt;FileInputStream referenced by fInput.getChannel()&gt;
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   AlwaysCloseNIOChannels.java (11): FileInputStream fInput = new FileInputStream(filename); // Allocated resource variable: new FileInputStream(filename)
+!    AlwaysCloseNIOChannels.java (12): FileChannel channel = fInput.getChannel(); // Allocated resource variable: fInput
+.    AlwaysCloseNIOChannels.java (13): ByteBuffer dst = ByteBuffer.allocate(512); // Allocated resource variable: fInput, &lt;FileInputStream referenced by channel&gt;, &lt;FileInputStream referenced by fInput.getChannel()&gt;
+.    AlwaysCloseNIOChannels.java (14): int read = channel.read(dst); // Allocated resource variable: fInput, &lt;FileInputStream referenced by channel&gt;, &lt;FileInputStream referenced by fInput.getChannel()&gt;
+.P   AlwaysCloseNIOChannels.java (16): } // Allocated resource variable: fInput, &lt;FileInputStream referenced by channel&gt;, &lt;FileInputStream referenced by fInput.getChannel()&gt;</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">16:&nbsp;</font>NIO channel not closed: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    AlwaysCloseNIOChannels.java (11): FileInputStream fInput = new FileInputStream(filename);
+.C   AlwaysCloseNIOChannels.java (12): FileChannel channel = fInput.getChannel(); // Allocated resource variable: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel
+.    AlwaysCloseNIOChannels.java (13): ByteBuffer dst = ByteBuffer.allocate(512); // Allocated resource variable: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel
+.    AlwaysCloseNIOChannels.java (14): int read = channel.read(dst); // Allocated resource variable: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel
+.P   AlwaysCloseNIOChannels.java (16): } // Allocated resource variable: &lt;FileInputStream referenced by channel&gt;.getChannel(), fInput.getChannel(), channel</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">25:&nbsp;</font>Variable 'fInput' is not closed within a "finally" block
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">OPT.CIO-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">28:&nbsp;</font>Variable 'read' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">33:&nbsp;</font>"channel" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   AlwaysCloseNIOChannels.java (23): FileChannel channel = null; // Null value carrier: channel
+!E   AlwaysCloseNIOChannels.java (25): new FileInputStream(filename) // FileInputStream.FileInputStream() throws: FileNotFoundException // Null value carrier: channel
+.    AlwaysCloseNIOChannels.java (30): catch (Exception ioe) // Null value carrier: channel
+.    AlwaysCloseNIOChannels.java (31): System.out.println("Exception occured: " + ioe); // Null value carrier: channel
+.P   AlwaysCloseNIOChannels.java (33): channel.close(); // Null value carrier: channel</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>4</b></font>]                
+&nbsp;<b>AlwaysCloseRAFs.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">12:&nbsp;</font>Variable 'read' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">14:&nbsp;</font>File not closed: raf
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    AlwaysCloseRAFs.java (8): String res = null;
+.C   AlwaysCloseRAFs.java (10): RandomAccessFile raf = new RandomAccessFile(sFileName, sMode); // Allocated resource variable: new RandomAccessFile(sFileName, sMode)
+.    AlwaysCloseRAFs.java (11): byte[] bytes = new byte[512]; // Allocated resource variable: raf
+!E   AlwaysCloseRAFs.java (12): int read = raf.read(bytes, offset, bytes.length); // RandomAccessFile.read() throws: IOException // Allocated resource variable: raf
+.P   AlwaysCloseRAFs.java (14): } // Allocated resource variable: raf</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">27:&nbsp;</font>Variable 'read' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">32:&nbsp;</font>"raf" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    AlwaysCloseRAFs.java (22): String res = null;
+.C   AlwaysCloseRAFs.java (23): RandomAccessFile raf = null; // Null value carrier: raf
+!E   AlwaysCloseRAFs.java (25): new RandomAccessFile(sFileName, sMode) // RandomAccessFile.RandomAccessFile() throws: FileNotFoundException // Null value carrier: raf
+.    AlwaysCloseRAFs.java (29): catch (Exception e) // Null value carrier: raf
+.    AlwaysCloseRAFs.java (30): System.out.println(); // Null value carrier: raf
+.P   AlwaysCloseRAFs.java (32): raf.close(); // Null value carrier: raf</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>3</b></font>]                
+&nbsp;<b>AlwaysCloseSockets.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">11:&nbsp;</font>Variable 'sock' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">13:&nbsp;</font>Socket not closed: sock
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   AlwaysCloseSockets.java (11): Socket sock = srvSocket.accept(); // Allocated resource variable: sock
+.P   AlwaysCloseSockets.java (13): } // Allocated resource variable: sock</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">27:&nbsp;</font>"sock" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   AlwaysCloseSockets.java (20): Socket sock = null; // Null value carrier: sock
+!E   AlwaysCloseSockets.java (22): sock = srvSocket.accept() // ServerSocket.accept() throws: IOException // Null value carrier: sock
+.    AlwaysCloseSockets.java (24): catch (IOException ioe) // Null value carrier: sock
+.    AlwaysCloseSockets.java (25): System.out.println("Exception occured: " + ioe); // Null value carrier: sock
+.P   AlwaysCloseSockets.java (27): sock.close(); // Null value carrier: sock</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>AlwaysCloseXMLEncDec.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">52:&nbsp;</font>"encoder" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   AlwaysCloseXMLEncDec.java (43): XMLEncoder encoder = null; // Null value carrier: encoder
+!E   AlwaysCloseXMLEncDec.java (45): new XMLEncoder(out) // XMLEncoder.XMLEncoder() throws: RuntimeException // Null value carrier: encoder
+.    AlwaysCloseXMLEncDec.java (49): catch (Exception e) // Null value carrier: encoder
+.    AlwaysCloseXMLEncDec.java (50): System.out.println("Exception occured: " + e); // Null value carrier: encoder
+.P   AlwaysCloseXMLEncDec.java (52): encoder.close(); // Null value carrier: encoder</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">72:&nbsp;</font>"decoder" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    AlwaysCloseXMLEncDec.java (58): Vector vObjs = new Vector();
+.C   AlwaysCloseXMLEncDec.java (59): XMLDecoder decoder = null; // Null value carrier: decoder
+!E   AlwaysCloseXMLEncDec.java (61): new XMLDecoder(in) // XMLDecoder.XMLDecoder() throws: ArrayIndexOutOfBoundsException // Null value carrier: decoder
+.    AlwaysCloseXMLEncDec.java (67): catch (ArrayIndexOutOfBoundsException endException) { // Null value carrier: decoder
+.P   AlwaysCloseXMLEncDec.java (72): decoder.close(); // Null value carrier: decoder</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>DereferenceBeforeNullCheck.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>6</b></font>]                
+&nbsp;<b>DivisionByZero.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">17:&nbsp;</font>Condition "code == 0" always evaluates to false
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   DivisionByZero.java (12): calculateDiscountedSum(int code, float initialSum, Consumer person)
+.    DivisionByZero.java (14): float discountedSum = calculateCommonDiscountedSum(initialSum);
+.       DivisionByZero.java (38): float discountedSum = 0.0f;
+.       DivisionByZero.java (39): if (initialSum &gt; 5.0f) {
+.       DivisionByZero.java (42): if (initialSum &lt; 5.0f) {
+.       DivisionByZero.java (45): return discountedSum;
+.    DivisionByZero.java (16): if (code == PERSONAL_DISCOUNT) {
+.P   DivisionByZero.java (17): if (code == DISCOUNT) {</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">17:&nbsp;</font>The "else" condition always evaluates to "false" because of previous branches
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.USC.UIF-1</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">18:&nbsp;</font>Condition "code == 0" always evaluates to false
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   DivisionByZero.java (12): calculateDiscountedSum(int code, float initialSum, Consumer person)
+.    DivisionByZero.java (14): float discountedSum = calculateCommonDiscountedSum(initialSum);
+.       DivisionByZero.java (38): float discountedSum = 0.0f;
+.       DivisionByZero.java (39): if (initialSum &gt; 5.0f) {
+.       DivisionByZero.java (42): if (initialSum &lt; 5.0f) {
+.       DivisionByZero.java (45): return discountedSum;
+.    DivisionByZero.java (16): if (code == PERSONAL_DISCOUNT) {
+.    DivisionByZero.java (17): if (code == DISCOUNT) {
+.P   DivisionByZero.java (18): if (code == SPECIAL_OFFER) {</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">18:&nbsp;</font>The "else" condition always evaluates to "false" because of previous branches
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.USC.UIF-1</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">23:&nbsp;</font>"discountedSum" may possibly be zero
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.ZERO-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   DivisionByZero.java (12): calculateDiscountedSum(int code, float initialSum, Consumer person)
+.    DivisionByZero.java (14): float discountedSum = calculateCommonDiscountedSum(initialSum);
+.       DivisionByZero.java (38): float discountedSum = 0.0f;
+.       DivisionByZero.java (39): if (initialSum &gt; 5.0f) {
+.       DivisionByZero.java (42): if (initialSum &lt; 5.0f) {
+.       DivisionByZero.java (45): return discountedSum;
+.    DivisionByZero.java (16): if (code == PERSONAL_DISCOUNT) {
+.    DivisionByZero.java (22): if (code == PERSONAL_DISCOUNT) {
+.    DivisionByZero.java (23): person.getOverallSum()
+.       DivisionByZero.java (65): return _overallSum;
+.P   DivisionByZero.java (23): float progressionCoef = person.getOverallSum() / discountedSum;</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">53:&nbsp;</font>Member class could be declared "static": Consumer
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">OPT.SI-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>FilesInjection.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">29:&nbsp;</font>"fOut" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   FilesInjection.java (23): FileOutputStream fOut = null; // Null value carrier: fOut
+.    FilesInjection.java (25): String sFileName = storyName; // Null value carrier: fOut
+!E   FilesInjection.java (26): new FileOutputStream(sFileName) // FileOutputStream.FileOutputStream() throws: FileNotFoundException // Null value carrier: fOut
+.P   FilesInjection.java (29): fOut.close(); // Null value carrier: fOut</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>IncorrectIteratorUsage.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">15:&nbsp;</font>Iterator "iter" may possibly be used after iterated collection is modified
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.CO.ITMOD-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   IncorrectIteratorUsage.java (14): Iterator iter = collection.iterator(); // Tracked iterators: iter // Tracked collections: collection
+.    IncorrectIteratorUsage.java (15): while (iter.hasNext()) { // Tracked iterators: iter // Tracked collections: collection
+.    IncorrectIteratorUsage.java (16): Object obj = iter.next(); // Tracked iterators: iter // Tracked collections: collection
+.    IncorrectIteratorUsage.java (17): if (tp.isAssignableFrom(obj.getClass())) { // Tracked iterators: iter // Tracked collections: collection
+!    IncorrectIteratorUsage.java (20): collection.remove(obj); // Collection Modification Point // Tracked iterators: iter // Tracked collections: collection
+.P   IncorrectIteratorUsage.java (15): iter.hasNext() // Tracked iterators: iter // Tracked collections: collection</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>InefficientCollectionRemoval.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">15:&nbsp;</font>Iterator "iter" may possibly be used after iterated collection is modified
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.CO.ITMOD-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   InefficientCollectionRemoval.java (14): Iterator iter = collection.iterator(); // Tracked iterators: iter // Tracked collections: collection
+.    InefficientCollectionRemoval.java (15): while (iter.hasNext()) { // Tracked iterators: iter // Tracked collections: collection
+.    InefficientCollectionRemoval.java (16): Object element = iter.next(); // Tracked iterators: iter // Tracked collections: collection
+!    InefficientCollectionRemoval.java (17): collection.remove(element); // Collection Modification Point // Tracked iterators: iter // Tracked collections: collection
+.P   InefficientCollectionRemoval.java (15): iter.hasNext() // Tracked iterators: iter // Tracked collections: collection</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">28:&nbsp;</font>'hasNext()' is called on the variable "iter" in the loop's condition, but 'next()' is never called on this variable in the
+loop's body
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.LOGIC.OAMC-2</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>4</b></font>]                
+&nbsp;<b>InefficientMapRemoval.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">15:&nbsp;</font>Iterator "iter" may possibly be used after iterated collection is modified
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.CO.ITMOD-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   InefficientMapRemoval.java (14): Iterator iter = map.keySet().iterator(); // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (15): while (iter.hasNext()) { // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (16): Object key = iter.next(); // Tracked iterators: iter // Tracked collections: map
+!    InefficientMapRemoval.java (17): map.remove(key); // Collection Modification Point // Tracked iterators: iter // Tracked collections: map
+.P   InefficientMapRemoval.java (15): iter.hasNext() // Tracked iterators: iter // Tracked collections: map</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">28:&nbsp;</font>Iterator "iter" may possibly be used after iterated collection is modified
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.CO.ITMOD-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   InefficientMapRemoval.java (27): Iterator iter = map.entrySet().iterator(); // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (28): while (iter.hasNext()) { // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (29): Map.Entry entry = (Map.Entry)iter.next(); // Tracked iterators: iter // Tracked collections: map
+.    InefficientMapRemoval.java (30): Object key = entry.getKey(); // Tracked iterators: iter // Tracked collections: map
+!    InefficientMapRemoval.java (31): map.remove(key); // Collection Modification Point // Tracked iterators: iter // Tracked collections: map
+.P   InefficientMapRemoval.java (28): iter.hasNext() // Tracked iterators: iter // Tracked collections: map</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">42:&nbsp;</font>'hasNext()' is called on the variable "iter" in the loop's condition, but 'next()' is never called on this variable in the
+loop's body
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.LOGIC.OAMC-2</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">54:&nbsp;</font>'hasNext()' is called on the variable "iter" in the loop's condition, but 'next()' is never called on this variable in the
+loop's body
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.LOGIC.OAMC-2</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>3</b></font>]                
+&nbsp;<b>InefficientMapUsage.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">17:&nbsp;</font>Variable 'value' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">31:&nbsp;</font>Variable 'key' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">32:&nbsp;</font>Variable 'value' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>4</b></font>]                
+&nbsp;<b>np</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>DatabaseObject.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>ExtendedNullPointer.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>MessageFormatter.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>MyDictionary.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">20:&nbsp;</font>"strKey" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   MyDictionary.java (16): String strKey = null; // Null value carrier: strKey
+.    MyDictionary.java (17): if (key instanceof String) { // Null value carrier: strKey
+.P   MyDictionary.java (20): dict.put(strKey, value); // Null value carrier: strKey</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>NullPointer.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">20:&nbsp;</font>"sFirstLine" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   NullPointer.java (10): String sFirstLine = null; // Null value carrier: sFirstLine
+.    NullPointer.java (11): BufferedReader reader = null; // Null value carrier: sFirstLine
+!E   NullPointer.java (13): new FileReader(sFileName) // FileReader.FileReader() throws: FileNotFoundException // Null value carrier: sFirstLine
+.    NullPointer.java (15): catch (Exception e) // Null value carrier: sFirstLine
+.    NullPointer.java (16): System.out.println("Exception occured. " + e.toString()); // Null value carrier: sFirstLine
+.    NullPointer.java (18): close(reader); // Null value carrier: sFirstLine
+.P   NullPointer.java (20): sFirstLine.length() // Null value carrier: sFirstLine</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">26:&nbsp;</font>"reader" may possibly be null
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.EXCEPT.NP-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    NullPointer.java (10): String sFirstLine = null;
+.C   NullPointer.java (11): BufferedReader reader = null; // Null value carrier: reader
+!E   NullPointer.java (13): new FileReader(sFileName) // FileReader.FileReader() throws: FileNotFoundException // Null value carrier: reader
+.    NullPointer.java (15): catch (Exception e) // Null value carrier: reader
+.    NullPointer.java (16): System.out.println("Exception occured. " + e.toString()); // Null value carrier: reader
+!    NullPointer.java (18): close(reader); // Null value carrier: reader
+.P      NullPointer.java (26): reader.close(); // Null value carrier: reader</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>SimpleNeverHappenedAndNotAcknowledgedByBD.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">7:&nbsp;</font>Member class could be declared "static": Name
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">OPT.SI-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>SQLInjection.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>SystemInjection.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>UnreachableCode.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">13:&nbsp;</font>Condition "result instanceof RuntimeException" always evaluates to false
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   UnreachableCode.java (8): printCalculationResult(Object result)
+.    UnreachableCode.java (10): if (result instanceof Exception) {
+.P   UnreachableCode.java (13): if (result instanceof RuntimeException) {</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">28:&nbsp;</font>Condition "!round" always evaluates to true
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   UnreachableCode.java (21): guessFigure(boolean round, boolean volumetric)
+.    UnreachableCode.java (23): final int figure;
+.    UnreachableCode.java (24): if (round &amp;&amp; volumetric) {
+.    UnreachableCode.java (26): if (round &amp;&amp; !volumetric) {
+.P   UnreachableCode.java (28): !round</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>UseBeforeInConstructorInitialization.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">43:&nbsp;</font>"this.minLoginLength" is used prior to explicit initialization
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.NOTINITCTOR-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">!    UseBeforeInConstructorInitialization.java (31): int minLoginLength = 7; // Point of Implicit Initialization // Not explicitly initialized value: this.minLoginLength
+!    UseBeforeInConstructorInitialization.java (35): super(name, password); // Not explicitly initialized value: this.minLoginLength
+.       UseBeforeInConstructorInitialization.java (17): this.name = name; // Not explicitly initialized value: this.minLoginLength
+.       UseBeforeInConstructorInitialization.java (18): this.password = password; // Not explicitly initialized value: this.minLoginLength
+!       UseBeforeInConstructorInitialization.java (19): checkData(); // Not explicitly initialized value: this.minLoginLength
+.P         UseBeforeInConstructorInitialization.java (43): if (super.name.length() &lt; this.minLoginLength) { // Not explicitly initialized value: this.minLoginLength
+.C   UseBeforeInConstructorInitialization.java (31): int minLoginLength = 7; // Not explicitly initialized value: this.minLoginLength</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">43:&nbsp;</font>"this.minLoginLength" is used prior to explicit initialization
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.NOTEXPLINIT-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   UseBeforeInConstructorInitialization.java (31): int minLoginLength = 7; // Not explicitly initialized value: this.minLoginLength
+!    UseBeforeInConstructorInitialization.java (35): super(name, password); // Not explicitly initialized value: this.minLoginLength
+.       UseBeforeInConstructorInitialization.java (17): this.name = name; // Not explicitly initialized value: this.minLoginLength
+.       UseBeforeInConstructorInitialization.java (18): this.password = password; // Not explicitly initialized value: this.minLoginLength
+!       UseBeforeInConstructorInitialization.java (19): checkData(); // Not explicitly initialized value: this.minLoginLength
+.P         UseBeforeInConstructorInitialization.java (43): super.name.length() &lt; this.minLoginLength // Not explicitly initialized value: this.minLoginLength</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>UseBeforeInitialization.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">22:&nbsp;</font>Stream not closed: new FileInputStream("...")
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    UseBeforeInitialization.java (20): ObjectInputStream source = null;
+ECP   UseBeforeInitialization.java (22): new ObjectInputStream(new FileInputStream("...")) // ObjectInputStream.ObjectInputStream() throws: IOException // Allocated resource variable: new FileInputStream("...")</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">57:&nbsp;</font>Member class could be declared "static": ValueStorage
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">OPT.SI-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>WebApplication.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>XMLInjection.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>junit4</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>IMoney.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>Money.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>MoneyBag.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>metrics</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>MetricsExample.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">12:&nbsp;</font>Value 8 is out of acceptable range: 'lower than 7'
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">METRIC.NBD-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>12</b></font>]                
+&nbsp;<b>nbank</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>AbstractTransaction.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>Account.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">40:&nbsp;</font>Condition "initial_balance &gt;= 5000" always evaluates to true
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   Account.java (36): setAccountStatus(int initial_balance)
+.    Account.java (38): if (initial_balance &lt; BALANCE_GOLD_MIN) {
+.P   Account.java (40): initial_balance &gt;= BALANCE_GOLD_MIN</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">87:&nbsp;</font>'List' field '_newAccountsLog' is never read
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURCO-1</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>Bank.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>ConnectionException.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>CreditCard.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">106:&nbsp;</font>"!=" is used when comparing 'String' Objects. 'equals()' should be used instead
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.CUB.UEIC-2</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>5</b></font>]                
+&nbsp;<b>Customer.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">87:&nbsp;</font>JDBC connection 'connection' is not closed in a "finally" block
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">JDBC.CDBC-1</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">100:&nbsp;</font>'0' is not a valid index value for this method call
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">JDBC.BRSA-1</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">111:&nbsp;</font>JDBC Connection not closed: connection
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    Customer.java (81): Connection connection = null;
+.    Customer.java (82): PreparedStatement statement = null;
+.    Customer.java (83): ResultSet resultSet = null;
+.    Customer.java (86): Class.forName("org.gjt.mm.mysql.Driver");
+.C   Customer.java (87): connection = DriverManager.getConnection("bank", "bank", "system") // Allocated resource variable: connection
+.    Customer.java (97): statement = connection.prepareStatement("select * from accounts where id=" + _ssn) // Allocated resource variable: connection
+.    Customer.java (98): resultSet = statement.executeQuery() // Allocated resource variable: connection
+.    Customer.java (100): _name = resultSet.getString(0) // Allocated resource variable: connection
+.    Customer.java (101): _ssn = resultSet.getString(2) // Allocated resource variable: connection
+.    Customer.java (103): resultSet.close(); // Allocated resource variable: connection
+.    Customer.java (104): statement.close(); // Allocated resource variable: connection
+.    Customer.java (110): return true; // Allocated resource variable: connection
+.P   Customer.java (111): } // Allocated resource variable: connection</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">111:&nbsp;</font>JDBC statement not closed: statement
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    Customer.java (81): Connection connection = null;
+.    Customer.java (82): PreparedStatement statement = null;
+.    Customer.java (83): ResultSet resultSet = null;
+.    Customer.java (86): Class.forName("org.gjt.mm.mysql.Driver");
+.    Customer.java (87): connection = DriverManager.getConnection("bank", "bank", "system")
+.C   Customer.java (97): statement = connection.prepareStatement("select * from accounts where id=" + _ssn) // Allocated resource variable: statement
+!E   Customer.java (98): resultSet = statement.executeQuery() // PreparedStatement.executeQuery() throws: SQLException // Allocated resource variable: statement
+.    Customer.java (105): catch (SQLException exception) // Allocated resource variable: statement
+.    Customer.java (106): System.err.println("Error loading data from database: " + exception.getMessage()); // Allocated resource variable: statement
+.    Customer.java (107): return false; // Allocated resource variable: statement
+.P   Customer.java (111): } // Allocated resource variable: statement</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">111:&nbsp;</font>JDBC resultset not closed: resultSet
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    Customer.java (81): Connection connection = null;
+.    Customer.java (82): PreparedStatement statement = null;
+.    Customer.java (83): ResultSet resultSet = null;
+.    Customer.java (86): Class.forName("org.gjt.mm.mysql.Driver");
+.    Customer.java (87): connection = DriverManager.getConnection("bank", "bank", "system")
+.    Customer.java (97): statement = connection.prepareStatement("select * from accounts where id=" + _ssn)
+.C   Customer.java (98): resultSet = statement.executeQuery() // Allocated resource variable: resultSet
+!E   Customer.java (100): _name = resultSet.getString(0) // ResultSet.getString() throws: SQLException // Allocated resource variable: resultSet
+.    Customer.java (105): catch (SQLException exception) // Allocated resource variable: resultSet
+.    Customer.java (106): System.err.println("Error loading data from database: " + exception.getMessage()); // Allocated resource variable: resultSet
+.    Customer.java (107): return false; // Allocated resource variable: resultSet
+.P   Customer.java (111): } // Allocated resource variable: resultSet</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>DepositTransaction.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>ITransaction.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>LogAccountInfo.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">32:&nbsp;</font>Variable 'out' is not closed within a "finally" block
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">OPT.CIO-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">36:&nbsp;</font>Stream not closed: &lt;Writer referenced by out&gt;
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    LogAccountInfo.java (28): int balance = account.getBalance();
+.       Account.java (59): return _balance;
+.    LogAccountInfo.java (29): String id = account.getID();
+.       Account.java (49): _customer.getSSN()
+.          Customer.java (40): return _ssn;
+.       Account.java (49): return _customer.getSSN();
+.    LogAccountInfo.java (30): File file = new File("account" + id);
+.    LogAccountInfo.java (31): BufferedWriter out;
+.C   LogAccountInfo.java (32): out = new BufferedWriter(new FileWriter(file)); // Allocated resource variable: new FileWriter(file)
+!E   LogAccountInfo.java (33): out.write(id); // Writer.write() throws: IOException // Allocated resource variable: &lt;Writer referenced by out&gt;
+.P   LogAccountInfo.java (36): } // Allocated resource variable: &lt;Writer referenced by out&gt;</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>WithdrawalTransaction.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">16:&nbsp;</font>Condition "amount &lt; 0 &amp;&amp; amount &gt; MAX_WITHDRAW" always evaluates to false
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.PB.CC-2</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   WithdrawalTransaction.java (14): WithdrawalTransaction(int amount)
+.P   WithdrawalTransaction.java (16): if (amount &lt; 0 &amp;&amp; amount &gt; MAX_WITHDRAW)</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">16:&nbsp;</font>Conditional expression always evaluates to "false"
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.USC.CC-1</font></td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>queue</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>Queue.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">52:&nbsp;</font>"!=" is used when comparing Objects. 'equals()' should be used instead
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.CUB.UEIC-2</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">64:&nbsp;</font>Member class could be declared "static": QueueItem
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">OPT.SI-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>5</b></font>]                
+&nbsp;<b>security</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>5</b></font>]                
+&nbsp;<b>InputValidation.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">58:&nbsp;</font>The field '_connection' is used but is never assigned a non-"null" value
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">PB.USC.FCBS-2</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">63:&nbsp;</font>Variable 'output' is not closed within a "finally" block
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">OPT.CIO-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">110:&nbsp;</font>JDBC statement not closed: stmt
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    InputValidation.java (87): Statement stmt = null;
+.    InputValidation.java (88): ResultSet rs = null;
+.    InputValidation.java (94): String query = "SELECT * FROM users WHERE username='" + username
+.C   InputValidation.java (96): stmt = _connection.createStatement() // Allocated resource variable: stmt
+.    InputValidation.java (97): rs = stmt.executeQuery(query) // Allocated resource variable: stmt
+.    InputValidation.java (99): if (rs.next()) { // Allocated resource variable: stmt
+.    InputValidation.java (101): return true; // Allocated resource variable: stmt
+.P   InputValidation.java (110): } // Allocated resource variable: stmt</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">110:&nbsp;</font>JDBC resultset not closed: rs
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.    InputValidation.java (87): Statement stmt = null;
+.    InputValidation.java (88): ResultSet rs = null;
+.    InputValidation.java (94): String query = "SELECT * FROM users WHERE username='" + username
+.    InputValidation.java (96): stmt = _connection.createStatement()
+.C   InputValidation.java (97): rs = stmt.executeQuery(query) // Allocated resource variable: rs
+.    InputValidation.java (99): if (rs.next()) { // Allocated resource variable: rs
+.    InputValidation.java (101): return true; // Allocated resource variable: rs
+.P   InputValidation.java (110): } // Allocated resource variable: rs</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">133:&nbsp;</font>JDBC statement not closed: stmt
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   InputValidation.java (129): Statement stmt = _connection.createStatement(); // Allocated resource variable: stmt
+.    InputValidation.java (130): String query = "INSERT INTO invalid_logins VALUES ('" + username // Allocated resource variable: stmt
+.    InputValidation.java (132): stmt.execute(query); // Allocated resource variable: stmt
+.P   InputValidation.java (133): } // Allocated resource variable: stmt</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>servlets</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>2</b></font>]                
+&nbsp;<b>ExampleServlet.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">35:&nbsp;</font>Variable 'pr' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">37:&nbsp;</font>Variable 'pr' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>stackmachine</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>AbstractStackMachine.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>CommandLineStackMachine.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">79:&nbsp;</font>Variable 'value' is never used
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">UC.AURV-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>CustomListRenderer.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>FifoStackMachine.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>LifoStackMachine.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>RunnableStackMachine.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>StackInterface.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>StackList.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>stubs</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="red"><b>1</b></font>]                
+&nbsp;<b>ConstructorExample.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0" border="0">
+<tr valign="top">
+<td width="2%"></td>
+<td><font class="gray">14:&nbsp;</font>File not closed: file
+</td>
+<td width="10%" nowrap>&nbsp;<a class="gray_link" href="#cs_dev1">mar</a>&nbsp;
+</td>
+<td align="right" width="10%" nowrap><font class="gray">BD.RES.LEAKS-1</font></td>
+</tr>
+<tr>
+<td style="padding-left:10px">&nbsp;</td>
+<!--bd_legend_required_marker-->
+<td><pre style="margin:0px;">.C   ConstructorExample.java (12): RandomAccessFile file = new RandomAccessFile (path, "rw"); // Allocated resource variable: new RandomAccessFile (path, "rw")
+!E   ConstructorExample.java (13): file.length () // RandomAccessFile.length() throws: IOException // Allocated resource variable: file
+.P   ConstructorExample.java (14): } // Allocated resource variable: file</pre></td>
+<td style="padding-right:10px;">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>FileExample.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>Interpreter.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+<li id="cs_foldheader">&nbsp;<font class="gray">+</font>&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>suppress</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>AllFileSuppress.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="item">&nbsp;&nbsp;&nbsp;&nbsp;[<b>0</b>/<font class="green"><b>0</b></font>]                
+&nbsp;<b>Example.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" border="0" bordercolor="#999999" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="2"><b>Flow Analysis Legend:<br><br></b></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>C</b> - violation cause
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>E</b> - throws an exception
+</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>P</b> - violation point
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>!</b> - important data flow
+</td>
+</tr>
+<!--bd_legend_present_marker-->
+</table><br><a name="met"></a><table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="40%"></td>
+<td align="center" width="15%">
+<div class="small_header">Metrics Summary</div>
+</td>
+<td align="right" width="40%">&nbsp;&nbsp;<a xmlns:textutil="textutil" xmlns:authors="authors" class="gray_link" href="javascript:expandMetricsDetails()">Expand All</a>&nbsp;&nbsp;&nbsp;<a xmlns:textutil="textutil" xmlns:authors="authors" class="gray_link" href="javascript:collapseMetricsDetails()">Collapse All</a>&nbsp;&nbsp;&nbsp;<a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table class="singleborder" width="100%" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr bgcolor="#F3F3F3" bordercolor="#CBCBCB" class="details" cellspacing="0">
+<td class="singleborder" align="center" width="25%">Metric name</td>
+<td class="singleborder" align="center" width="15%">Number of items</td>
+<td class="singleborder" align="center" width="15%">Average</td>
+<td class="singleborder" align="center" width="15%">Std. Deviation</td>
+<td class="singleborder" align="center" width="15%">Maximum</td>
+<td class="singleborder" align="center" width="15%">Minimum</td>
+</tr>
+<tr>
+<td class="singleborder" style="padding-left:5px; padding-right:5px" colspan="6" width="100%">
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="25%"><font color="#F3F3F3">+</font>&nbsp;<b>McCabe Cyclomatic Complexity</b>&nbsp;<font class="gray">(METRIC.CC)</font></td>
+<td align="right" width="15%"><b>268</b></td>
+<td align="right" width="15%"><b>1.646</b></td>
+<td align="right" width="15%"><b>1.254</b></td>
+<td align="right" width="15%"><b>10</b></td>
+<td align="right" width="15%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:demo</td>
+<td align="right" width="15%">268</td>
+<td align="right" width="15%">1.646</td>
+<td align="right" width="15%">1.254</td>
+<td align="right" width="15%">10</td>
+<td align="right" width="15%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="25%"><font color="#F3F3F3">+</font>&nbsp;<b>Nested Blocks Depth</b>&nbsp;<font class="gray">(METRIC.NBD)</font></td>
+<td align="right" width="15%"><b>268</b></td>
+<td align="right" width="15%"><b>0.377</b></td>
+<td align="right" width="15%"><b>0.794</b></td>
+<td align="right" width="15%"><b>8</b></td>
+<td align="right" width="15%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:demo</td>
+<td align="right" width="15%">268</td>
+<td align="right" width="15%">0.377</td>
+<td align="right" width="15%">0.794</td>
+<td align="right" width="15%">8</td>
+<td align="right" width="15%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="25%"><font color="#F3F3F3">+</font>&nbsp;<b>Number of Physical Lines in Files</b>&nbsp;<font class="gray">(METRIC.NOPLIF)</font></td>
+<td align="right" width="15%"><b>58</b></td>
+<td align="right" width="15%"><b>62.552</b></td>
+<td align="right" width="15%"><b>65.087</b></td>
+<td align="right" width="15%"><b>460</b></td>
+<td align="right" width="15%"><b>11</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:demo</td>
+<td align="right" width="15%">58</td>
+<td align="right" width="15%">62.552</td>
+<td align="right" width="15%">65.087</td>
+<td align="right" width="15%">460</td>
+<td align="right" width="15%">11</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="25%"><font color="#F3F3F3">+</font>&nbsp;<b>Number of Source Lines in Methods</b>&nbsp;<font class="gray">(METRIC.NOSLIM)</font></td>
+<td align="right" width="15%"><b>268</b></td>
+<td align="right" width="15%"><b>7.571</b></td>
+<td align="right" width="15%"><b>5.907</b></td>
+<td align="right" width="15%"><b>40</b></td>
+<td align="right" width="15%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" width="25%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:demo</td>
+<td align="right" width="15%">268</td>
+<td align="right" width="15%">7.571</td>
+<td align="right" width="15%">5.907</td>
+<td align="right" width="15%">40</td>
+<td align="right" width="15%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table><br><br><a name="berr"></a><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="25%"></td>
+<td align="center">
+<div class="header">SETUP PROBLEMS</div>
+</td>
+<td align="right" width="25%" valign="bottom"><a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0" class="doubleborder" border="0" bordercolor="#CBCBCB">
+<tr>
+<td align="left" style="padding-left:10px"><b>
+[INFO]
+&nbsp;Following dependencies does not exist:</b></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;padding-bottom:5px">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><pre style="margin:5px 5px 3px 5px;white-space:pre-wrap;">/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/classes/main</pre></td>
+</tr>
+<tr>
+<td><pre style="margin:5px 5px 3px 5px;white-space:pre-wrap;">/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/resources/main</pre></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="left" style="padding-left:10px"><b>
+[INFO]
+&nbsp;The following rules are designed for Java 7 and ignore files from 'com.parasoft:demo' project which is compiled in Java 6</b></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;padding-bottom:5px">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><pre style="margin:5px 5px 3px 5px;white-space:pre-wrap;">PB.RE.JLAY, PB.API.VENDOR, PB.RE.RCODE</pre></td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><br></td>
+</tr>
+</table><script language="JavaScript">
+    if(document.getElementById("cs_link_sev") != null) {
+    document.getElementById("cs_link_sev").style.color="#990000";
+    document.getElementById("cs_link_sev").style.textDecoration="underline";
+    }
+    if(document.getElementById("cs_link_sevtrue") != null) {
+    document.getElementById("cs_link_sevtrue").style.color="#990000";
+    document.getElementById("cs_link_sevtrue").style.textDecoration="underline";
+    }
+    </script></td>
+</tr>
+</table>
+<table style="padding-right:25px;padding-left:25px" width="100%" cellspacing="0">
+<tr>
+<td>
+<table width="100%" class="singleborder_blue" bgcolor="#FFFFFF" bordercolor="#A0CAEC" cellspacing="0" align="center" rules="none">
+<tr>
+<td bgcolor="#FFFFFF" align="center">
+<div class="small_header">Test Parameters</div>
+</td>
+</tr>
+<tr>
+<td style="padding-right:25px;padding-left:25px;padding-top:4px;padding-bottom:4px" bgcolor="#FFFFFF" align="left">
+<table class="doubleborder" width="100%" bordercolor="#CBCBCB" cellpadding="4" cellspacing="0" align="center">
+<tr>
+<td bgcolor="#FFFFFF" align="left">
+<div id="paramsHeader">jtestcli -data /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/jtest/jtest.data.json -exclude path:**/tests/**
+-exclude path:/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/tests -settings /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/demo.properties
+-report /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/reports/jtest
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" bgcolor="#1D488D" border="0" bordercolor="#999999" cellpadding="10" cellspacing="0">
+<tr>
+<td align="center"><font class="white">&copy;Parasoft Corp. -&nbsp;DTP Engine for Java&nbsp;10.2.2.20160325&nbsp;Reporting System&nbsp;</font></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

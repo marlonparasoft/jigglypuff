@@ -1,0 +1,2 @@
+License: Activation failed: Cannot connect to license server.
+License: Machine id LINUX2-201ce400

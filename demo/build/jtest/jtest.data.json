@@ -1,0 +1,81 @@
+{
+  "name": "com.parasoft:demo",
+  "location": "/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build.gradle",
+  "type": "classpath_project",
+  "build_id": "10.2.2.20160325-20160401-0909",
+  "schema_version": "1.1",
+  "testoutcomes": [
+    {
+      "type": "junit",
+      "files": []
+    }
+  ],
+  "compilations": [
+    {
+      "id": "main",
+      "sourcepath": [
+        "/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/src"
+      ],
+      "includes": [],
+      "excludes": [],
+      "tests": [],
+      "binarypath": [
+        "/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/classes/main"
+      ],
+      "classpath": [
+        "/home/mar/.gradle/caches/modules-2/files-2.1/javax.servlet/servlet-api/2.4/3fc542fe8bb8164e8d3e840fe7403bc0518053c0/servlet-api-2.4.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-module-junit4/1.5.5/b7345c0fb1863da1d318df655baf9c4578ff8717/powermock-module-junit4-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-api-mockito/1.5.5/5c1dd0cc7e9f6ee36fe00f1786a3bad71301d9b2/powermock-api-mockito-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-module-junit4-common/1.5.5/56fe72c5ae3699254da00d3bcf1c111ad20a49ad/powermock-module-junit4-common-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-all/1.9.5/79a8984096fc6591c1e3690e07d41be506356fa5/mockito-all-1.9.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-api-support/1.5.5/47ced6e594775c9540f2510d339c7d27c290bbd3/powermock-api-support-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-core/1.5.5/ba81ce0cbc358f1a9570db81a417d5a60a3c6c85/powermock-core-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-reflect/1.5.5/cc8cc783dbef2d0c0d83e099cf3e74127b2c2251/powermock-reflect-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.18.2-GA/1180a90fbad732b60fb728a6bbe8fcb3151423d7/javassist-3.18.2-GA.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar"
+      ],
+      "bootpath": [
+        "/home/mar/Parasoft_tools/jre1.7.0_79/lib/rt.jar"
+      ],
+      "encoding": "UTF-8",
+      "sourcelevel": "1.5"
+    },
+    {
+      "id": "test",
+      "sourcepath": [
+        "/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/tests"
+      ],
+      "includes": [],
+      "excludes": [],
+      "tests": [
+        "/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/tests/**"
+      ],
+      "binarypath": [
+        "/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/classes/test"
+      ],
+      "classpath": [
+        "/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/classes/main",
+        "/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/resources/main",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/javax.servlet/servlet-api/2.4/3fc542fe8bb8164e8d3e840fe7403bc0518053c0/servlet-api-2.4.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-module-junit4/1.5.5/b7345c0fb1863da1d318df655baf9c4578ff8717/powermock-module-junit4-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-api-mockito/1.5.5/5c1dd0cc7e9f6ee36fe00f1786a3bad71301d9b2/powermock-api-mockito-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-module-junit4-common/1.5.5/56fe72c5ae3699254da00d3bcf1c111ad20a49ad/powermock-module-junit4-common-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-all/1.9.5/79a8984096fc6591c1e3690e07d41be506356fa5/mockito-all-1.9.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-api-support/1.5.5/47ced6e594775c9540f2510d339c7d27c290bbd3/powermock-api-support-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-core/1.5.5/ba81ce0cbc358f1a9570db81a417d5a60a3c6c85/powermock-core-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.powermock/powermock-reflect/1.5.5/cc8cc783dbef2d0c0d83e099cf3e74127b2c2251/powermock-reflect-1.5.5.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.18.2-GA/1180a90fbad732b60fb728a6bbe8fcb3151423d7/javassist-3.18.2-GA.jar",
+        "/home/mar/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar"
+      ],
+      "bootpath": [
+        "/home/mar/Parasoft_tools/jre1.7.0_79/lib/rt.jar"
+      ],
+      "encoding": "UTF-8",
+      "sourcelevel": "1.5"
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+License: Machine id LINUX2-201ce400
+Rules have changed, performing update
+Downloaded rules: 0
+Rules have changed, performing update
+Configuration: Recommended Rules (builtin://Recommended Rules).
+Command line: jtestcli -data /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/jtest/jtest.data.json -exclude path:**/tests/** -exclude path:/home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/tests -settings /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/demo.properties -report /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/reports/jtest
+[ 0%] > Computing testing context.
+Number of excluded elements: 6.
+[ 2%] < Computing testing context.: 100% 
+[ 2%] > Scope
+[ 2%] > Scope > Resources Filter
+Code Duplication: parser with 2 active rule(s) is enabled.
+Code Duplication: Duplicates detection is enabled.
+[ 2%] > Analysis
+[ 2%] > Analysis > Code Duplication
+[ 2%] > Analysis > Java Flow Graph
+[ 2%] > Analysis > Java Flow
+[ 2%] > Analysis > Metrics
+[ 2%] > Analysis > Java Static
+[ 2%] > Analysis > Properties Static
+[ 2%] > Analysis > RuleWizard Static
+[ 2%] > Analysis > XML Static
+[ 2%] > Results
+[ 2%] > Results > Metrics processor
+[ 2%] > Results > Scope Processor
+[ 2%] > Results > Duplicates Processor
+[ 2%] > Results > Rule Limit Processor
+[ 2%] > Results > Metadata Processor
+[ 2%] > Results > Unit Test Processor
+[ 2%] > Results > Author Processor
+[ 2%] > Results > Suppression Processor
+[ 2%] > Results > Coverage Processor
+[ 2%] > Results > Goals Processor
+[ 2%] > Analysis
+[ 2%] > Analysis > IOC
+[ 2%] > Reporting
+[41%] < Analysis > IOC: number of analyzed inputs 0 of 65, skipped 65             >>> IOC time 0.07s
+[41%] < Analysis: found 0 violations                                              >>> Analysis time 0.1s
+[46%] < Scope > Resources Filter: rejected 0 of 59 analyzed inputs 
+[46%] < Scope: rejected 0 of 59 analyzed inputs                                   >>> Scope time 0.01s
+[47%] < Analysis > Code Duplication: Parsed 59 of 59 inputs                       >>> Code Duplication time 7.52s
+[55%]   Analysis > Java Flow Graph: Parasoft Java Flow Graph Analyzer 10.2.2.20160331B30
+[55%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../MetricsExample.java
+[55%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../MyDictionary.java
+[55%]   Analysis > Java Flow Graph: created 7 graphs for /demo/.../CommandLineStackMachine.java
+[56%]   Analysis > Java Flow Graph: created 1 graph for /demo/.../ConnectionException.java
+[56%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../AlwaysCloseXMLEncDec.java
+[56%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../AlwaysCloseNIOChannels.java
+[56%]   Analysis > Java Flow Graph: created 4 graphs for /demo/.../UnreachableCode.java
+[56%]   Analysis > Java Flow Graph: created 6 graphs for /demo/.../SystemInjection.java
+[56%]   Analysis > Java Flow Graph: created 11 graphs for /demo/.../Customer.java
+[57%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../InefficientMapUsage.java
+[57%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../ExampleServlet.java
+[57%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../InputValidation.java
+[57%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../InefficientCollectionRemoval.java
+[57%]   Analysis > Java Flow Graph: created 40 graphs for /demo/.../RunnableStackMachine.java
+[58%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../AlwaysCloseRAFs.java
+[58%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../AlwaysCloseSockets.java
+[58%]   Analysis > Java Flow Graph: created 7 graphs for /demo/.../AbstractStackMachine.java
+[58%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../CustomListRenderer.java
+[58%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../DepositTransaction.java
+[58%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../LifoStackMachine.java
+[58%]   Analysis > Java Flow Graph: created 4 graphs for /demo/.../SQLInjection.java
+[59%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../AbstractTransaction.java
+[59%]   Analysis > Java Flow Graph: created 10 graphs for /demo/.../StackList.java
+[59%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../AlwaysCloseLogging.java
+[59%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../UseBeforeInConstructorInitialization.java
+[59%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../XMLInjection.java
+[59%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../WithdrawalTransaction.java
+[60%]   Analysis > Java Flow Graph: created 6 graphs for /demo/.../DatabaseObject.java
+[60%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../FilesInjection.java
+[60%]   Analysis > Java Flow Graph: created 17 graphs for /demo/.../CreditCard.java
+[60%]   Analysis > Java Flow Graph: created 6 graphs for /demo/.../UseBeforeInitialization.java
+[60%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../InefficientMapRemoval.java
+[60%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../Bank.java
+[60%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../AlwaysCloseImages.java
+[61%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../WebApplication.java
+[61%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../DereferenceBeforeNullCheck.java
+[61%]   Analysis > Java Flow Graph: created 9 graphs for /demo/.../Account.java
+[61%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../Simple.java
+[61%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../ExtendedNullPointer.java
+[62%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../IncorrectIteratorUsage.java
+[62%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../FifoStackMachine.java
+[62%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../LogAccountInfo.java
+[62%]   Analysis > Java Flow Graph: created 5 graphs for /demo/.../SimpleNeverHappenedAndNotAcknowledgedByBD.java
+[62%]   Analysis > Java Flow Graph: created 10 graphs for /demo/.../DivisionByZero.java
+[62%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../MessageFormatter.java
+[63%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../NullPointer.java
+[63%]   Analysis > Java Flow Graph: created 11 graphs for /demo/.../Queue.java
+[63%]   Analysis > Java Flow Graph: created 3 graphs for /demo/.../AlwaysCloseGSS.java
+[63%]   Analysis > Java Flow Graph: Parasoft Java Flow Graph Analyzer 10.2.2.20160331B30
+[63%]   Analysis > Java Flow Graph: created 18 graphs for /demo/.../MoneyBag.java
+[63%]   Analysis: found 0 violations 
+[63%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../ConstructorExample.java
+[63%]   Analysis > Java Flow Graph: created 14 graphs for /demo/.../Money.java
+[63%]   Analysis > Java Flow Graph: created 1 graph for /demo/.../Example.java
+[64%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../Interpreter.java
+[64%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../AllFileSuppress.java
+[64%]   Analysis > Java Flow Graph: created 2 graphs for /demo/.../FileExample.java
+[64%] < Analysis > Java Flow Graph: created 303 graphs on analyzed 58 of 59 inputs, skipped 1       >>> Java Flow Graph time 9.4s
+[64%]   Analysis > Java Flow: Parasoft Java Flow Analyzer 10.2.2.20160331B30
+[64%]   Analysis > Java Flow > Graph scanning: Initializing control flow graphs prescan
+[64%]   Analysis > Java Flow > Graph scanning: Prescanning control flow graphs. Performed 0%
+[64%]   Analysis > Java Flow > Graph scanning: Prescanning control flow graphs. Performed 33%
+[64%]   Analysis > Java Flow > Graph scanning: Prescanning control flow graphs. Performed 66%
+[64%]   Analysis > Java Flow > Graph scanning: Prescanning control flow graphs. Performed 99%
+[64%]   Analysis > Java Flow > Graph scanning: Prescanning control flow graphs. Performed 100%
+[64%] > Analysis > Java Flow > Graph scanning > Processing methods: Collecting exceptions info, phase 1
+[64%] < Analysis > Java Flow > Graph scanning > Processing methods: Collecting exceptions info, phase 1: 100% 
+[64%] > Analysis > Java Flow > Graph scanning > Processing methods: Collecting exceptions info, phase 2
+[64%] < Analysis > Java Flow > Graph scanning > Processing methods: Collecting exceptions info, phase 2: 100% 
+[64%]   Analysis > Java Flow > Graph scanning: Finalizing control flow graphs prescan
+[65%]   Analysis > Java Flow: Checking /demo/.../MoneyBag.java
+[65%]   Analysis > Java Flow: Checking /demo/.../RunnableStackMachine.java
+[65%]   Analysis > Java Flow: Checking /demo/.../CreditCard.java
+[65%]   Analysis: found 0 violations 
+[65%]   Analysis > Java Flow: Checking /demo/.../Money.java
+[65%]   Analysis > Java Flow: Checking /demo/.../Customer.java
+[65%]   Analysis > Java Flow: Checking /demo/.../Queue.java
+[65%]   Analysis > Java Flow: Checking /demo/.../DivisionByZero.java
+[65%]   Analysis > Java Flow: Checking /demo/.../StackList.java
+[65%]   Analysis > Java Flow: Checking /demo/.../Account.java
+[65%]   Analysis > Java Flow: Checking /demo/.../AbstractStackMachine.java
+[65%]   Analysis > Java Flow: Checking /demo/.../CommandLineStackMachine.java
+[65%]   Analysis > Java Flow: Checking /demo/.../DatabaseObject.java
+[65%]   Analysis > Java Flow: 25% 
+[65%]   Analysis > Java Flow: Checking /demo/.../SystemInjection.java
+[65%]   Analysis > Java Flow: Checking /demo/.../UseBeforeInitialization.java
+[65%]   Analysis > Java Flow: Checking /demo/.../AlwaysCloseXMLEncDec.java
+[65%]   Analysis > Java Flow: Checking /demo/.../Bank.java
+[65%]   Analysis > Java Flow: Checking /demo/.../ExtendedNullPointer.java
+[65%]   Analysis > Java Flow: Checking /demo/.../FifoStackMachine.java
+[65%]   Analysis > Java Flow: Checking /demo/.../InefficientMapRemoval.java
+[65%]   Analysis > Java Flow: Checking /demo/.../InputValidation.java
+[65%]   Analysis > Java Flow: Checking /demo/.../LifoStackMachine.java
+[65%]   Analysis > Java Flow: Checking /demo/.../SimpleNeverHappenedAndNotAcknowledgedByBD.java
+[65%]   Analysis > Java Flow: Checking /demo/.../UseBeforeInConstructorInitialization.java
+[65%]   Analysis > Java Flow: Checking /demo/.../WebApplication.java
+[65%]   Analysis > Java Flow: Checking /demo/.../SQLInjection.java
+[65%]   Analysis > Java Flow: Checking /demo/.../UnreachableCode.java
+[65%]   Analysis > Java Flow: Checking /demo/.../AlwaysCloseGSS.java
+[65%]   Analysis > Java Flow: 47% 
+[65%]   Analysis > Java Flow: Checking /demo/.../AlwaysCloseImages.java
+[65%]   Analysis: found 0 violations 
+[65%]   Analysis > Java Flow: Checking /demo/.../AlwaysCloseLogging.java
+[65%]   Analysis > Java Flow: Checking /demo/.../AlwaysCloseNIOChannels.java
+[66%]   Analysis > Java Flow: Checking /demo/.../AlwaysCloseRAFs.java
+[66%]   Analysis > Java Flow: Checking /demo/.../AlwaysCloseSockets.java
+[66%]   Analysis > Java Flow: Checking /demo/.../DereferenceBeforeNullCheck.java
+[66%]   Analysis > Java Flow: Checking /demo/.../ExampleServlet.java
+[66%]   Analysis > Java Flow: Checking /demo/.../FilesInjection.java
+[66%]   Analysis > Java Flow: Checking /demo/.../IncorrectIteratorUsage.java
+[66%]   Analysis > Java Flow: Checking /demo/.../InefficientCollectionRemoval.java
+[66%]   Analysis > Java Flow: Checking /demo/.../InefficientMapUsage.java
+[66%]   Analysis > Java Flow: Checking /demo/.../MessageFormatter.java
+[66%]   Analysis > Java Flow: Checking /demo/.../MyDictionary.java
+[66%]   Analysis > Java Flow: Checking /demo/.../NullPointer.java
+[66%]   Analysis > Java Flow: Checking /demo/.../Simple.java
+[66%]   Analysis > Java Flow: Checking /demo/.../WithdrawalTransaction.java
+[66%]   Analysis > Java Flow: Checking /demo/.../AbstractTransaction.java
+[66%]   Analysis > Java Flow: Checking /demo/.../AllFileSuppress.java
+[66%]   Analysis > Java Flow: Checking /demo/.../ConstructorExample.java
+[66%]   Analysis > Java Flow: Checking /demo/.../CustomListRenderer.java
+[66%]   Analysis > Java Flow: Checking /demo/.../DepositTransaction.java
+[66%]   Analysis > Java Flow: Checking /demo/.../FileExample.java
+[66%]   Analysis > Java Flow: Checking /demo/.../Interpreter.java
+[66%]   Analysis > Java Flow: Checking /demo/.../LogAccountInfo.java
+[66%]   Analysis: found 0 violations 
+[66%]   Analysis > Java Flow: Checking /demo/.../MetricsExample.java
+[66%]   Analysis > Java Flow: Checking /demo/.../XMLInjection.java
+[66%]   Analysis > Java Flow: Checking /demo/.../ConnectionException.java
+[66%]   Analysis > Java Flow: Checking /demo/.../Example.java
+[66%]   Analysis > Java Flow: Checking /demo/.../IMoney.java
+[66%]   Analysis > Java Flow: Checking /demo/.../ITransaction.java
+[66%]   Analysis > Java Flow: Checking /demo/.../StackInterface.java
+[66%]   Results > Metrics processor: processed 0 accepted violations 
+[66%]   Results > Scope Processor: removed 0 of 0 violations 
+[66%]   Results > Duplicates Processor: removed 0 of 0 violations  
+[66%]   Results > Rule Limit Processor: removed 0 of 0 violations  
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../MyDictionary.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../AlwaysCloseXMLEncDec.java
+[66%]   Analysis > Java Flow: found 3 violations in /demo/.../AlwaysCloseNIOChannels.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../UnreachableCode.java
+[66%]   Analysis > Java Flow: found 3 violations in /demo/.../Customer.java
+[66%]   Analysis > Java Flow: found 3 violations in /demo/.../InputValidation.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../InefficientCollectionRemoval.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../ConstructorExample.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../AlwaysCloseRAFs.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../AlwaysCloseSockets.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../AlwaysCloseLogging.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../UseBeforeInConstructorInitialization.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../WithdrawalTransaction.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../FilesInjection.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../UseBeforeInitialization.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../InefficientMapRemoval.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../AlwaysCloseImages.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../Account.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../IncorrectIteratorUsage.java
+[66%]   Analysis > Java Flow: found 1 violation in /demo/.../LogAccountInfo.java
+[66%]   Analysis > Java Flow: found 3 violations in /demo/.../DivisionByZero.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../NullPointer.java
+[66%]   Analysis > Java Flow: found 2 violations in /demo/.../AlwaysCloseGSS.java
+[66%] < Analysis > Java Flow: 100%                                                >>> Java Flow time 23.72s
+[66%]   Analysis > Metrics: calculated 4 metric values for /demo/.../MetricsExample.java
+[66%]   Analysis > Metrics: calculated 16 metric values for /demo/.../CommandLineStackMachine.java
+[66%]   Analysis > Metrics: calculated 13 metric values for /demo/.../AlwaysCloseXMLEncDec.java
+[66%]   Analysis > Metrics: calculated 7 metric values for /demo/.../ITransaction.java
+[66%]   Analysis > Metrics: calculated 4 metric values for /demo/.../ConnectionException.java
+[67%]   Analysis > Metrics: calculated 52 metric values for /demo/.../CreditCard.java
+[67%]   Analysis > Metrics: calculated 31 metric values for /demo/.../Customer.java
+[67%]   Analysis > Metrics: calculated 16 metric values for /demo/.../Bank.java
+[67%]   Analysis > Metrics: calculated 13 metric values for /demo/.../InputValidation.java
+[67%]   Analysis > Metrics: calculated 7 metric values for /demo/.../ExampleServlet.java
+[67%]   Analysis > Metrics: calculated 13 metric values for /demo/.../WebApplication.java
+[67%]   Analysis > Metrics: calculated 7 metric values for /demo/.../AlwaysCloseRAFs.java
+[67%]   Analysis > Metrics: calculated 121 metric values for /demo/.../RunnableStackMachine.java
+[67%]   Analysis > Metrics: calculated 25 metric values for /demo/.../Account.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../Simple.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../StackInterface.java
+[68%]   Analysis > Metrics: calculated 25 metric values for /demo/.../AbstractStackMachine.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../DepositTransaction.java
+[68%]   Analysis > Metrics: calculated 13 metric values for /demo/.../FifoStackMachine.java
+[68%]   Analysis > Metrics: calculated 4 metric values for /demo/.../CustomListRenderer.java
+[68%]   Analysis > Metrics: calculated 13 metric values for /demo/.../LifoStackMachine.java
+[68%]   Analysis > Metrics: calculated 4 metric values for /demo/.../LogAccountInfo.java
+[68%]   Analysis > Metrics: calculated 4 metric values for /demo/.../AbstractTransaction.java
+[68%]   Analysis > Metrics: calculated 31 metric values for /demo/.../StackList.java
+[68%]   Analysis > Metrics: calculated 31 metric values for /demo/.../Queue.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../AlwaysCloseLogging.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../AlwaysCloseGSS.java
+[68%]   Analysis > Metrics: calculated 13 metric values for /demo/.../UseBeforeInConstructorInitialization.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../WithdrawalTransaction.java
+[68%]   Analysis > Metrics: calculated 16 metric values for /demo/.../DatabaseObject.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../MyDictionary.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../AlwaysCloseNIOChannels.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../FilesInjection.java
+[68%]   Analysis > Metrics: calculated 7 metric values for /demo/.../UnreachableCode.java
+[68%]   Analysis > Metrics: calculated 13 metric values for /demo/.../UseBeforeInitialization.java
+[68%]   Analysis > Metrics: calculated 13 metric values for /demo/.../InefficientMapRemoval.java
+[69%]   Analysis > Metrics: calculated 22 metric values for /demo/.../SystemInjection.java
+[69%]   Analysis > Metrics: calculated 7 metric values for /demo/.../InefficientMapUsage.java
+[69%]   Analysis > Metrics: calculated 7 metric values for /demo/.../InefficientCollectionRemoval.java
+[69%]   Analysis > Metrics: calculated 7 metric values for /demo/.../AlwaysCloseImages.java
+[69%]   Analysis > Metrics: calculated 52 metric values for /demo/.../MoneyBag.java
+[69%]   Analysis > Metrics: calculated 4 metric values for /demo/.../ConstructorExample.java
+[69%]   Analysis > Metrics: calculated 10 metric values for /demo/.../DereferenceBeforeNullCheck.java
+[69%]   Analysis > Metrics: calculated 25 metric values for /demo/.../IMoney.java
+[69%]   Analysis > Metrics: calculated 7 metric values for /demo/.../AlwaysCloseSockets.java
+[70%]   Analysis > Metrics: calculated 13 metric values for /demo/.../ExtendedNullPointer.java
+[70%]   Analysis > Metrics: calculated 4 metric values for /demo/.../AllFileSuppress.java
+[70%]   Analysis > Metrics: calculated 7 metric values for /demo/.../IncorrectIteratorUsage.java
+[70%]   Analysis > Metrics: calculated 1 metric value for /demo/.../Example.java
+[70%]   Analysis > Metrics: calculated 10 metric values for /demo/.../SQLInjection.java
+[70%]   Analysis > Metrics: calculated 13 metric values for /demo/.../SimpleNeverHappenedAndNotAcknowledgedByBD.java
+[70%]   Analysis > Metrics: calculated 7 metric values for /demo/.../Interpreter.java
+[70%]   Analysis > Metrics: calculated 22 metric values for /demo/.../DivisionByZero.java
+[70%]   Analysis > Metrics: calculated 7 metric values for /demo/.../MessageFormatter.java
+[70%]   Reporting: reported 0 accepted violations 
+[74%]   Analysis > Metrics: calculated 4 metric values for /demo/.../FileExample.java
+[74%]   Analysis > Metrics: calculated 7 metric values for /demo/.../NullPointer.java
+[74%]   Analysis > Metrics: calculated 43 metric values for /demo/.../Money.java
+[74%]   Analysis > Metrics: calculated 4 metric values for /demo/.../XMLInjection.java
+[75%] < Analysis > Metrics: calculated 862 metric values on analyzed 59 of 59 inputs, skipped 0       >>> Metrics time 1.52s
+[75%]   Results > Metrics processor: processed 41 accepted violations 
+[75%]   Results > Scope Processor: removed 0 of 41 violations 
+[75%]   Results > Duplicates Processor: removed 0 of 41 violations  
+[75%]   Results > Rule Limit Processor: removed 0 of 41 violations  
+[75%]   Analysis: found 40 violations 
+[75%]   Analysis > Java Static: found 1 violation in /demo/.../CommandLineStackMachine.java
+[75%]   Analysis > Java Static: found 1 violation in /demo/.../CreditCard.java
+[75%]   Analysis > Java Static: found 2 violations in /demo/.../Customer.java
+[75%]   Results: processed 41 accepted violations                                 >>> Results ETA 0m2s
+[75%]   Reporting: reported 41 accepted violations 
+[76%]   Analysis > Java Static: found 2 violations in /demo/.../InputValidation.java
+[76%]   Analysis > Java Static: found 2 violations in /demo/.../ExampleServlet.java
+[76%]   Analysis > Java Static: found 2 violations in /demo/.../AlwaysCloseRAFs.java
+[77%]   Analysis > Java Static: found 1 violation in /demo/.../Account.java
+[77%]   Analysis > Java Static: found 1 violation in /demo/.../Simple.java
+[77%]   Analysis > Java Static: found 1 violation in /demo/.../LogAccountInfo.java
+[78%]   Analysis > Java Static: found 1 violation in /demo/.../Queue.java
+[78%]   Analysis > Java Static: found 1 violation in /demo/.../WithdrawalTransaction.java
+[78%]   Analysis > Java Static: found 4 violations in /demo/.../AlwaysCloseNIOChannels.java
+[78%]   Analysis > Java Static: found 2 violations in /demo/.../InefficientMapRemoval.java
+[79%]   Analysis > Java Static: found 3 violations in /demo/.../InefficientMapUsage.java
+[79%]   Analysis > Java Static: found 1 violation in /demo/.../InefficientCollectionRemoval.java
+[79%]   Analysis > Java Static: found 1 violation in /demo/.../AlwaysCloseSockets.java
+[80%]   Analysis > Java Static: found 2 violations in /demo/.../DivisionByZero.java
+[81%] < Analysis > Java Static: found 28 violations on analyzed 58 of 59 inputs, skipped 1       >>> Java Static time 12.29s
+[82%] < Analysis > Properties Static: found 0 violations on analyzed 1 of 59 inputs, skipped 58       >>> Properties Static time 0.01s
+[82%]   Analysis: found 68 violations 
+[83%]   Analysis > RuleWizard Static: found 1 violation in /demo/.../Simple.java
+[83%]   Results: processed 41 accepted violations                                 >>> Results ETA 0m2s
+[83%]   Reporting: reported 41 accepted violations 
+[84%]   Analysis > RuleWizard Static: found 1 violation in /demo/.../Queue.java
+[85%]   Analysis > RuleWizard Static: found 1 violation in /demo/.../UseBeforeInitialization.java
+[86%]   Analysis > RuleWizard Static: found 1 violation in /demo/.../SimpleNeverHappenedAndNotAcknowledgedByBD.java
+[87%]   Analysis > RuleWizard Static: found 1 violation in /demo/.../DivisionByZero.java
+[87%] < Analysis > RuleWizard Static: found 5 violations on analyzed 58 of 59 inputs, skipped 1       >>> RuleWizard Static time 12.7s
+[89%] < Analysis > XML Static: found 0 violations on analyzed 0 of 59 inputs, skipped 59       >>> XML Static time 0s
+[89%] < Analysis: found 73 violations                                             >>> Analysis time 1m7s
+[89%] < Results > Metrics processor: processed 74 accepted violations 
+[89%] < Results > Scope Processor: removed 0 of 74 violations 
+[89%] < Results > Duplicates Processor: removed 0 of 74 violations  
+[89%] < Results > Rule Limit Processor: removed 0 of 74 violations  
+[90%]   Results: processed 53 accepted violations                                 >>> Results ETA 0m2s
+[90%]   Reporting: reported 53 accepted violations 
+[93%] < Results > Metadata Processor: DTP metadata available for 63 of 74 applicable findings  
+[93%] < Results > Unit Test Processor: processed 74 accepted violations 
+[93%] < Results > Author Processor: reassigned 0 of 74 accepted violations 
+[93%] < Results > Suppression Processor: suppressed 0 of 74 accepted violations 
+[93%] < Results > Coverage Processor: processed 0 of 0 coverage infos 
+[94%] < Results > Goals Processor: processed 74 accepted violations 
+[95%] < Results: processed 74 accepted violations                                 >>> Results time 2.02s
+[95%] < Reporting: reported 74 accepted violations                                >>> Reporting time 2.47s
+[95%]                                                                             >>> Total time 1m30s
+[95%] > Finalizing reporters.
+Files in scope: 59
+Rules violated: 21
+Metrics enabled: 4
+Static analysis violations: 74
+Unit Tests failures: 0
+Executed test cases: 0
+Coverage: 0/0 lines (0% covered)
+Running time in seconds : 98
+[95%]   Finalizing reporters.: 16% 
+Setup problems were encountered, increase Verbosity to 'High' to see details.
+Generated XML report: /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/reports/jtest/report.xml
+Sending reports by mail is disabled, use report.mail.enabled setting to enable.
+Publishing reports to DTP is disabled, use report.dtp.publish setting to enable.
+Generated HTML report: /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/reports/jtest/report.html
+[96%]   Finalizing reporters.: 33% 
+Generated XML report: /home/mar/Parasoft_tools/Jtest_10_2_2/jtest/examples/demo/build/reports/jtest/metrics.xml
+[100%] < Finalizing reporters.: 100% 
